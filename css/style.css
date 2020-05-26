@@ -1,0 +1,258 @@
+/*============RESET CSS===============*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* BASE STYLING */
+
+
+body {
+	font-family: "Helvetica Neue", Arial, sans-serif;
+	font-size: 15px;
+    line-height: 1.4;
+    /* background-color: #111111; */
+}
+
+.wrapper {
+	width: 1120px;
+	height: 100%;
+    margin: 0 auto;
+}
+
+/*============HEADER STYLE===============*/
+.page-header {
+	height: 66px;
+	width: 100%;
+    position: absolute;
+    background-color: #111111;
+    z-index: 100;   /* so animation of text goes behind page header */
+}
+
+.page-header .logo {
+	float: left;
+}
+
+#logo-pic {
+    height: 60px;
+    padding-top: 2.5px;
+    padding-left: 59.78px;
+}
+
+.page-header .main-nav {
+    float: right;
+}
+
+.main-nav li {
+	float: left;
+	margin-left: 90px;
+}
+
+.main-nav li a {
+	color: #fff;
+	text-transform: uppercase;
+	text-decoration: none;
+	line-height: 66px;
+}
+
+.main-nav li a:hover {
+	color: #22D7B6;
+}
+
+/*============BANNER===============*/
+.banner {
+    height: 600px;
+    background: url(../images/mountain-side.jpg);
+    background-size: cover;
+    background-position: 0 66px;
+    background-repeat: no-repeat;
+    /* background-origin: padding-box;  */
+    padding-top: 66px; 
+    box-sizing: border-box;     /* keeps footer from popping too far below */
+    /* text-align: center; */
+	
+}
+
+.banner-block {
+    padding-top: 170px;
+    padding-left: 450px;
+	font-size: 60px;
+	font-weight: bold;
+    text-align: center;
+    color: black;
+}
+
+.banP1 {
+    display: inline-block;
+    position: relative;
+    animation-name: dropDownAnimation;
+    animation-duration: 1s;
+    animation-delay: 0.5s;
+    animation-fill-mode: forwards; 
+    top: -300px;
+}
+  
+.banP2 {
+    display: inline-block;
+    position: relative;
+    animation-name: dropDownAnimation;
+    animation-duration: 1s;
+    animation-delay: 1.5s;
+    animation-fill-mode: forwards; 
+    top: -300px;
+}
+  
+.banP3 {
+    display: inline-block;
+    position: relative;
+    animation-name: dropDownAnimation;
+    animation-duration: 1s;
+    animation-delay: 2.5s;
+    animation-fill-mode: forwards; 
+    top: -300px;
+}
+
+@keyframes dropDownAnimation {
+    0%   {top:-300px;}
+    100%  {top:30px;}    
+}
+
+/* adds padding between individual sections between main title */
+.main-title:not(:first-child):not(:last-child) {
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+.subtitle {
+    animation-name: fadeIn;
+    animation-duration: 3s;
+  	animation-delay: 3s;
+  	animation-fill-mode: forwards;
+    visibility: hidden;
+	font-size: 21px;
+	font-weight: 300;
+    margin: 25px 0px;
+    position: relative;
+    display: inline;
+}
+
+@keyframes fadeIn {
+    0% {visibility: hidden; opacity: 0;}
+    100% {visibility: visible; opacity: 1;}
+ }
+
+/*============Footer===============*/
+.page-footer {
+	background: #111111;
+    padding-top: 10px;
+    overflow: auto;
+    color: #fff;
+}
+
+.footer-col {
+    width: 25%;
+    float: left;            /* allows the column texts to be horizontally, rather than vertical */
+    text-align: center;     /* centers text in div */
+    line-height: 21px;      /* 21px is height on div, so line-height of 21px vertically aligns items in div */
+    background-color: #111111;
+}
+
+.page-footer h3, .footer-col h3 {
+	font-size: 12px;
+    text-transform: uppercase;
+    display: inline-block;
+    vertical-align: middle;
+    line-height: 40px;
+}
+
+.page-footer h3::after {
+	content: '.';
+	font-size: 0;
+	width: 100%;                /* makes line underneath text the same width as text */
+	height: 1px;
+	background: #22D7B6;
+    display: block;             /* makes horizontal line visible somehow */
+    margin: 3px 0;              /* needed to not mess up footer */
+}
+
+.page-footer li {
+	font-size: 13px;
+	color: #999;
+	line-height: 1.6;
+}
+
+.page-footer li:hover {
+	color: #fff;
+	cursor: pointer;
+}
+
+.copy {
+	color: #585858;
+	margin-top: 32px;
+}
+
+.social a {
+	display: inline-block;
+	width: 35px;
+	height: 35px;
+	border-radius: 50%;
+	background: #000;
+	color: #fff;
+    /* text-align: center; */
+    line-height: 40px;
+}
+
+.social a:hover {
+	background: #fff;
+	color: #22D7B6;
+}
+
+#links {
+    margin-left: 10px;  /* moves social links left */
+    /* margin-top: 1px;  */
+}
+
+h4 {
+    padding-top: 66px;  /* to have text pop below header */
+}
+
+
