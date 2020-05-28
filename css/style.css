@@ -51,6 +51,7 @@ body {
 	font-size: 15px;
     line-height: 1.4;
     /* background-color: #111111; */
+    height: 100%;
 }
 
 .wrapper {
@@ -61,7 +62,7 @@ body {
 
 /*============HEADER STYLE===============*/
 .page-header {
-	height: 66px;
+	height: 10%;
 	width: 100%;
     position: absolute;
     background-color: #111111;
@@ -98,10 +99,17 @@ body {
 	color: #22D7B6;
 }
 
+/* the line underneath the current page in the nav bar */
+.active-nav {
+    border-bottom: 1px solid #22D7B6;
+}
+
+
 /*============BANNER===============*/
 .banner {
     height: 600px;
-    background: url(../images/mountain-side.jpg);
+    width: 100%;
+    background: url(../images/mountain-side-2.jpg);
     background-size: cover;
     background-position: 0 66px;
     background-repeat: no-repeat;
@@ -109,7 +117,6 @@ body {
     padding-top: 66px; 
     box-sizing: border-box;     /* keeps footer from popping too far below */
     /* text-align: center; */
-	
 }
 
 .banner-block {
@@ -186,6 +193,7 @@ body {
     padding-top: 10px;
     overflow: auto;
     color: #fff;
+    width: auto;
 }
 
 .footer-col {
@@ -212,6 +220,7 @@ body {
 	background: #22D7B6;
     display: block;             /* makes horizontal line visible somehow */
     margin: 3px 0;              /* needed to not mess up footer */
+    
 }
 
 .page-footer li {
@@ -255,4 +264,39 @@ h4 {
     padding-top: 66px;  /* to have text pop below header */
 }
 
+/* Projects.html styling */
+.firstRow {
+    padding-top: 180px;
+}
 
+.card-body-links {
+    margin: auto;
+}
+
+/* transforms size of hovered item */
+.firstRow:hover > *:hover {
+    /* opacity: 1; */
+    transform: scale(1.1);
+}
+
+/* .firstRow:hover > * {
+    opacity: 0.3;
+}
+
+.firstRow {
+    pointer-events: none;
+}
+  
+.firstRow > * {
+    pointer-events: auto;
+}  */
+
+
+
+
+
+
+
+/* .allCards:hover .card:hover {
+    opacity: 1;
+} */
