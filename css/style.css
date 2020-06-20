@@ -4,7 +4,7 @@ h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
 del, dfn, em, img, ins, kbd, q, s, samp,
 small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
+u, center,
 dl, dt, dd, ol, ul, li,
 fieldset, form, label, legend,
 table, caption, tbody, tfoot, thead, tr, th, td,
@@ -27,9 +27,9 @@ footer, header, hgroup, menu, nav, section {
 body {
 	line-height: 1;
 }
-ol, ul {
+/* ol, ul {
 	list-style: none;
-}
+} */
 blockquote, q {
 	quotes: none;
 }
@@ -102,6 +102,10 @@ body {
 /* the line underneath the current page in the nav bar */
 .active-nav {
     border-bottom: 1px solid #22D7B6;
+}
+
+.nav-li-items li {
+    list-style: none;
 }
 
 
@@ -217,7 +221,7 @@ body {
 	font-size: 0;
 	width: 100%;                /* makes line underneath text the same width as text */
 	height: 1px;
-	background: #22D7B6;
+	
     display: block;             /* makes horizontal line visible somehow */
     margin: 3px 0;              /* needed to not mess up footer */
     
@@ -279,24 +283,22 @@ h4 {
     transform: scale(1.1);
 }
 
-/* .firstRow:hover > * {
-    opacity: 0.3;
+.card-img-top {
+    border: 1px solid black;
+    width: 100%;
+    height: 11vw;
+    object-fit: cover;
 }
 
-.firstRow {
-    pointer-events: none;
-}
-  
-.firstRow > * {
-    pointer-events: auto;
-}  */
-
-
-
-
-
-
-
-/* .allCards:hover .card:hover {
-    opacity: 1;
+/* .project-description li {
+    list-style-type: disc;
 } */
+
+/* Following two style elements allow scroll bar on modal */
+.modal-dialog{
+    overflow-y: initial !important
+}
+.modal-body{
+    height: 350px;
+    overflow-y: auto;
+}
