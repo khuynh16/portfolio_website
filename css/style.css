@@ -1,50 +1,4 @@
-/*============RESET CSS===============*/
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-u, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline;
-}
-/* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
-footer, header, hgroup, menu, nav, section {
-	display: block;
-}
-body {
-	line-height: 1;
-}
-/* ol, ul {
-	list-style: none;
-} */
-blockquote, q {
-	quotes: none;
-}
-blockquote:before, blockquote:after,
-q:before, q:after {
-	content: '';
-	content: none;
-}
-table {
-	border-collapse: collapse;
-	border-spacing: 0;
-}
-
 /* BASE STYLING */
-
 
 body {
 	font-family: "Helvetica Neue", Arial, sans-serif;
@@ -52,6 +6,23 @@ body {
     line-height: 1.4;
     /* background-color: #111111; */
     height: 100%;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    /* height: 100%; */
+    min-height: 100%;
+}
+
+html {
+    margin: 0;
+    height: 100%;
+    min-height: 100%;
+}
+
+main {
+    overflow-y: scroll;
+    -webkit-overflow-scrolling: touch;
+    flex: auto;
 }
 
 .wrapper {
@@ -67,6 +38,7 @@ body {
     position: absolute;
     background-color: #111111;
     z-index: 100;   /* so animation of text goes behind page header */
+    flex: none;
 }
 
 .page-header .logo {
@@ -115,12 +87,11 @@ body {
     width: 100%;
     background: url(../images/mountain-side-2.jpg);
     background-size: cover;
-    background-position: 0 66px;
+    /* background-position: 0 66px; */
     background-repeat: no-repeat;
     /* background-origin: padding-box;  */
     padding-top: 66px; 
     box-sizing: border-box;     /* keeps footer from popping too far below */
-    /* text-align: center; */
 }
 
 .banner-block {
@@ -130,6 +101,10 @@ body {
 	font-weight: bold;
     text-align: center;
     color: black;
+}
+
+.moveLeft {
+    margin-left: 15%;
 }
 
 .banP1 {
@@ -198,6 +173,7 @@ body {
     overflow: auto;
     color: #fff;
     width: auto;
+    flex: none;
 }
 
 .footer-col {
@@ -214,17 +190,6 @@ body {
     display: inline-block;
     vertical-align: middle;
     line-height: 40px;
-}
-
-.page-footer h3::after {
-	content: '.';
-	font-size: 0;
-	width: 100%;                /* makes line underneath text the same width as text */
-	height: 1px;
-	
-    display: block;             /* makes horizontal line visible somehow */
-    margin: 3px 0;              /* needed to not mess up footer */
-    
 }
 
 .page-footer li {
@@ -290,10 +255,6 @@ h4 {
     object-fit: cover;
 }
 
-/* .project-description li {
-    list-style-type: disc;
-} */
-
 /* Following two style elements allow scroll bar on modal */
 .modal-dialog{
     overflow-y: initial !important
@@ -302,3 +263,78 @@ h4 {
     height: 350px;
     overflow-y: auto;
 }
+
+/* CONTACT.HTML STYLING */
+
+.marginTop {
+    margin-top: 8%;
+}
+
+/* puts little padding above nav bar, otherwise it doesn't work as intended (in contact.html) */
+.contact {
+    padding-top: 0.1px;
+    background-color: #1F6D63;
+}
+
+.contactSend {
+    color: white !important;
+}
+
+.contactForm {
+    color: white;
+}
+
+/* ABOUT.HTML STYLING */
+.myHeadshot {
+    height: auto;
+    width: 50%;
+    border-style: ridge;
+}
+
+.about {
+    padding-top: 0.1px;
+    background-color: #1F6D63;
+}
+
+.whiteText {
+    color: white;
+    font-size: 18px;
+}
+
+.aboutBtn {
+    color: white;
+    text-decoration: underline;
+}
+
+.aboutBtn:hover {
+    color: black;
+}
+
+.favPhoto {
+    width: 90%;
+    height: auto;
+    border-style: ridge;
+}
+
+.figCaption {
+    font-size: 13px;
+}
+
+.whiteHR {
+    background-color: white;
+}
+
+/* PHOTOGRAPHY.HTML STYLING */
+.photoGalleryPic img {
+    width: 100%;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s; 
+}
+
+  
+.photoGalleryPic img:hover {
+    opacity: 0.7;
+}
+
+
