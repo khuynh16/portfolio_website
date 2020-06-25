@@ -1,3 +1,4 @@
+// for contact.html
 function validateForm() {
     var name =  document.getElementById('name').value;
     if (name == "") {
@@ -27,3 +28,31 @@ function validateForm() {
     }
     document.querySelector('.status').innerHTML = "Sending...";
   }
+
+// for photography.html
+
+for (let i = 0; i < 9; i++) {
+    var modal = document.getElementById("mod" + (i + 1));
+
+    var img = document.getElementById("img" + (i + 1));
+    var modalImg = document.getElementById("modalImg" + (i + 1));
+    var captionText = document.getElementById("cap" + (i + 1));
+
+    img.onclick = function(){
+        modal.style.display = "block";
+        modalImg.src = this.src;
+        captionText.innerHTML = this.alt;
+    }
+}
+
+// Get the <span> element that closes the modal
+// for some reason, value in brackets has to be one less than total number of pics in photo gallery 
+// to have close button work
+var span = document.getElementsByClassName("close")[8];
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() { 
+    modal.style.display = "none";
+}
+
+

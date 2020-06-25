@@ -2,13 +2,13 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Contact Page</title>
+	<title>Photography</title>
 	<link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="css/all.min.css">
 	<link rel="stylesheet" href="css/style.css">
 </head>
 
-<body class="contact">
+<body class="contact photography">
 
     <!-- nav bar -->
     <header class="page-header">
@@ -31,38 +31,90 @@
     <div class="container  marginTop">
         <div class="row">
             <div class="col-4 photoGalleryPic text-center">
-                <img src="images/photo_gallery/11.jpg" alt="">
+                <img src="images/photo_gallery/11.jpg"  id="img1" alt="My sister's dog, Sophie">
             </div>
             <div class="col-4 photoGalleryPic text-center">
-                <img src="images/photo_gallery/2.jpg" alt="">
+                <img src="images/photo_gallery/2.jpg" id="img2" alt="Field somewhere in Massanutten, Virgina">
             </div>
             <div class="col-4 photoGalleryPic text-center">
-                <img src="images/photo_gallery/3.jpg" alt="">
+                <img src="images/photo_gallery/3.jpg" id="img3" alt="Bridge view of river in Massanutten, Virginia">
             </div>
         </div>
         <div class="row">
             <div class="col-4 photoGalleryPic mt-4">
-                <img src="images/photo_gallery/4.jpg" alt="">
+                <img src="images/photo_gallery/4.jpg" id="img4" alt="Over field view in Massanutten, Virginia">
             </div>
             <div class="col-4 photoGalleryPic mt-4">
-                <img src="images/photo_gallery/6.jpg" alt="">
+                <img src="images/photo_gallery/6.jpg" id="img5" alt="Shoreside in Singapore or Maylasia">
             </div>
             <div class="col-4 photoGalleryPic mt-4">
-                <img src="images/photo_gallery/7.jpg" alt="">
+                <img src="images/photo_gallery/7.jpg" id="img6" alt="Temple in Singapore, Maylasia, or Thailand">
             </div>
         </div>
         <div class="row">
             <div class="col-4 photoGalleryPic mt-4 mb-4">
-                <img src="images/photo_gallery/9.jpg" alt="">
+                <img src="images/photo_gallery/9.jpg" id="img7" alt="Lakeside somewhere in Singapore">
             </div>
             <div class="col-4 photoGalleryPic mt-4 mb-4">
-                <img src="images/photo_gallery/10.jpg" alt="">
+                <img src="images/photo_gallery/10.jpg" id="img8" alt="Under trees during a rainy day">
             </div>
             <div class="col-4 photoGalleryPic mt-4 mb-4">
-                <img src="images/photo_gallery/1.jpg" alt="">
+                <img src="images/photo_gallery/1.jpg" id="img9" alt="Mountain side view">
             </div>
         </div>
     </div>
+
+    <!-- Modal for pictures in gallery -->
+    <!-- First row -->
+    <div id="mod1" class="modal">
+        <span class="close">&times;</span>
+        <img class="modal-content" id="modalImg1">
+        <div id="cap1" class="caption"></div>
+    </div>
+    <div id="mod2" class="modal">
+        <span class="close">&times;</span>
+        <img class="modal-content" id="modalImg2">
+        <div id="cap2" class="caption"></div>
+    </div>
+    <div id="mod3" class="modal">
+        <span class="close">&times;</span>
+        <img class="modal-content" id="modalImg3">
+        <div id="cap3" class="caption"></div>
+    </div>
+    <!-- second row -->
+    <div id="mod4" class="modal">
+        <span class="close">&times;</span>
+        <img class="modal-content" id="modalImg4">
+        <div id="cap4" class="caption"></div>
+    </div>
+    <div id="mod5" class="modal">
+        <span class="close">&times;</span>
+        <img class="modal-content" id="modalImg5">
+        <div id="cap5" class="caption"></div>
+    </div>
+    <div id="mod6" class="modal">
+        <span class="close">&times;</span>
+        <img class="modal-content" id="modalImg6">
+        <div id="cap6" class="caption"></div>
+    </div>
+    <!-- third row -->
+    <div id="mod7" class="modal">
+        <span class="close">&times;</span>
+        <img class="modal-content" id="modalImg7">
+        <div id="cap7" class="caption"></div>
+    </div>
+    <div id="mod8" class="modal">
+        <span class="close">&times;</span>
+        <img class="modal-content" id="modalImg8">
+        <div id="cap8" class="caption"></div>
+    </div>
+    <div id="mod9" class="modal">
+        <span class="close">&times;</span>
+        <img class="modal-content" id="modalImg9">
+        <div id="cap9" class="caption"></div>
+    </div>
+
+    <script src="js/script.js"></script>
 
 </body>
 </html> 

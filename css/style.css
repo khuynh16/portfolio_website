@@ -2,28 +2,23 @@
 
 body {
 	font-family: "Helvetica Neue", Arial, sans-serif;
-	font-size: 15px;
-    line-height: 1.4;
+	/* font-size: 15px;
+    line-height: 1.4; */
     /* background-color: #111111; */
     height: 100%;
-    display: flex;
-    flex-direction: column;
-    margin: 0;
-    /* height: 100%; */
-    min-height: 100%;
 }
 
 html {
-    margin: 0;
-    height: 100%;
-    min-height: 100%;
-}
+    margin:0;
+    padding:0;
+    width: 100%;
+} 
 
-main {
+/* main {
     overflow-y: scroll;
     -webkit-overflow-scrolling: touch;
     flex: auto;
-}
+} */
 
 .wrapper {
 	width: 1120px;
@@ -38,7 +33,7 @@ main {
     position: absolute;
     background-color: #111111;
     z-index: 100;   /* so animation of text goes behind page header */
-    flex: none;
+    /* flex: none; */
 }
 
 .page-header .logo {
@@ -88,10 +83,10 @@ main {
     background: url(../images/mountain-side-2.jpg);
     background-size: cover;
     /* background-position: 0 66px; */
-    background-repeat: no-repeat;
+    /* background-repeat: no-repeat; */
     /* background-origin: padding-box;  */
-    padding-top: 66px; 
-    box-sizing: border-box;     /* keeps footer from popping too far below */
+    padding-top: 66px;          /* moves front page text down a bit */
+    /* box-sizing: border-box;      keeps footer from popping too far below */
 }
 
 .banner-block {
@@ -101,6 +96,11 @@ main {
 	font-weight: bold;
     text-align: center;
     color: black;
+}
+
+.banner-block .row {
+    margin: 0;
+    padding: 0;
 }
 
 .moveLeft {
@@ -169,7 +169,7 @@ main {
 /*============Footer===============*/
 .page-footer {
 	background: #111111;
-    padding-top: 10px;
+    padding-top: 9px;
     overflow: auto;
     color: #fff;
     width: auto;
@@ -332,9 +332,60 @@ h4 {
     transition: 0.3s; 
 }
 
-  
 .photoGalleryPic img:hover {
     opacity: 0.7;
+}
+
+/* The Close Button when clicking on individual pictures */
+.close {
+    position: absolute;
+    top: 105px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.close:hover, .close:focus {
+  color: #bbb;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* The Modal (background) */
+.photography .modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 150px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    /* overflow: auto; Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+  }
+
+/* Modal Content (image) */
+.photography .modal-content {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+}
+  
+/* Caption of Modal Image */
+.caption {
+margin: auto;
+display: block;
+width: 80%;
+max-width: 700px;
+text-align: center;
+color: #ccc;
+padding: 10px 0;
+height: 150px;
 }
 
 
