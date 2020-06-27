@@ -24,13 +24,14 @@ html {
 	width: 1120px;
 	height: 100%;
     margin: 0 auto;
+    display: flex;
 }
 
 /*============HEADER STYLE===============*/
 .page-header {
 	height: 10%;
-	width: 100%;
-    position: absolute;
+	width: 100vw;
+    position: fixed;
     background-color: #111111;
     z-index: 100;   /* so animation of text goes behind page header */
     /* flex: none; */
@@ -75,11 +76,102 @@ html {
     list-style: none;
 }
 
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (max-width: 768px) {
+
+}
+
+/* inbetween */
+@media only screen and (max-width: 850px) {
+    .main-nav li {
+        margin-left: 10px !important;
+    }
+   
+
+    .page-header .main-nav {
+        margin-left: 10px !important;
+    }   
+    
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (max-width: 992px) {
+    .main-nav li {
+        margin-left: 30px !important;
+    }
+   
+
+    .page-header .main-nav {
+        margin-left: 30px !important;
+    }   
+    
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (max-width: 1200px) {
+    .main-nav li {
+        margin-left: 50px;
+    }
+
+    .page-header .main-nav {
+        margin-left: 50px;
+    }
+}
+
+/* @media screen and (max-width:1240px) {
+    .main-nav li {
+        margin-left: 50px;
+    }
+
+    .page-header .main-nav {
+        margin-right: 50px;
+    }
+}
+
+@media screen and (max-width:1160px) {
+    .main-nav li {
+        margin-left: 30px;
+    }
+
+    .page-header .main-nav {
+        margin-right: 90px;
+    }
+}
+
+@media screen and (max-width:1060px) {
+    .page-header .main-nav {
+        margin-right: 190px;
+    }
+}
+
+@media screen and (max-width:960px) {
+    .page-header .main-nav {
+        margin-right: 300px;
+    }
+}
+
+@media screen and (max-width:850px) {
+    .main-nav li {
+        margin-left: 10px;
+    }
+
+    .page-header .main-nav {
+        margin-right: 350px;
+    }
+}
+
+
+@media screen and (max-width:768px) {
+    body {
+        display: none;
+    }
+} */
+
 
 /*============BANNER===============*/
 .banner {
     height: 600px;
-    width: 100%;
+    width: 100vw;
     background: url(../images/mountain-side-2.jpg);
     background-size: cover;
     /* background-position: 0 66px; */
@@ -172,8 +264,8 @@ html {
     padding-top: 9px;
     overflow: auto;
     color: #fff;
-    width: auto;
-    flex: none;
+    /* width: 100vw; */
+    /* flex: none; */
 }
 
 .footer-col {
