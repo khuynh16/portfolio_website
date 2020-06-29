@@ -16,3 +16,16 @@ Plans include:
 Thanks for taking the time to read this!
 
 -Kelvin Huynh
+
+CHANGES:
+
+  6/29/2020:
+  
+  -moved all frontend pages into one (index.html)
+  
+  -added navbar anchor scroll animation
+  
+  -still need to update underlining of navbar anchor section when clicked and passing anchor
+  
+
+
