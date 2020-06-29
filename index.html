@@ -16,17 +16,17 @@
 			</div>
 			<nav class="main-nav">
 				<ul class="nav-li-items">
-					<li><a class="active-nav" href="./index.html">Home</a></li>
-					<li><a class="" href="./about.html">About</a></li>
-					<li><a class="" href="./projects.html">Projects</a></li>
-					<li><a class="photos" href="./photography.html">Photography</a></li>
-					<li><a class="" href="./contact.html">Contact</a></li>
+					<li><a class="homeNav active-nav" href="#homeAnchor">Home</a></li>
+					<li><a class="aboutNav" href="#aboutAnchor">About</a></li>
+					<li><a class="projectsNav" href="#projectsAnchor">Projects</a></li>
+					<li><a class="photos photosNav" href="#photosAnchor">Photography</a></li>
+					<li><a class="" href="#contactAnchor">Contact</a></li>
 				</ul>
 			</nav>
 		</div>
     </header>
     
-    <main>
+    <main id="homeAnchor">
 		<div class="banner">
 			<div class="banner-block moveLeft">
 				<div class="row">
@@ -38,10 +38,364 @@
 					<p class="subtitle">Kelvin Huynh: Aspriring Software Developer</p> 
 				</div>
             </div>
-            
-        </div>
-    </main>
+		</div>
+		
+		<!-- the about page -->
+		<section class="about">
+			<div class="container marginTop">
+				<div class="row sectionTitle">
+					<h1><span id="aboutAnchor"></span>About Me</h1>
+				</div>
+				<div class="row">
+					<div class="col-5 text-center">
+						<img class="myHeadshot" src="images/headshot.jpg" alt="headshot-of-me">
+					</div>
+					<div class="col-7">
+						<h2>My Experience</h2>
+						<hr class="blackHR">
+						<p class="mt-3">I am an Information Science graduate (Dec. 2019) from University of Maryland, College Park. 
+							My focus in the major revolved around data analysis (Python, R, SQL) and web development 
+							(HTML, CSS, JavaScript, PHP, and SQL). However, I have been recently focusing on the latter, 
+							wanting to deal with visual design and application on a day-to-day basis. In attempt to do so, 
+							I have been learning various software technologies to see capability in my software development, 
+							revolving around current (and future) projects (<a class="aboutBtn" href="projects.html">View</a> 
+							projects for more details!).</p>
+					</div>
+				</div>
+		
+				<div class="row mt-4 mb-4">
+					<div class="col-7">
+						<h2>My Interests</h2>
+						<hr class="blackHR">
+						<p class="mt-3">While not working on creating or developing software applications, I like to indulge in a mobile game 
+							called Summoners War (SW): one of many monster collector games on the app store. While I am nowhere 
+							near capable of creating a game such as SW, some sort of mini application could be possible. 
+							Another long term hobby of mine has been photography, more specifically, 
+							of scenery. Some examples of my favorite ones that I’ve taken via phone are located 
+							in the <a class="aboutBtn" href="photography.html">‘Photography’</a> tab on this site!</p>
+					</div>
+					<div class="col-5 text-center">
+						<img class="favPhoto" src="images/toMassanutten.jpg" alt="toMassanutten">
+						<figcaption class="figCaption mt-1">A field when driving to Massanutten, Virginia.</figcaption>
+					</div>
+				</div>
+			</div>
+		</section>
 
+		<!-- PROJECTS SECTION -->
+		<section class="projects">
+			<div class="container allCards">
+				<div class="row sectionTitle">
+					<h1><span id="projectsAnchor"></span>Projects</h1>
+				</div>
+				<div class="row firstRow">
+					<!-- spacing column -->
+					<div class="col spacers"></div>
+					<!-- first project card -->
+					<div class="col">
+						<div class="card" style="width: 18rem;">
+							<img class="card-img-top" src="./images/Gorgeous_Nails_Project_Checkout.png" alt="Gorgeous Nails Checkout Page">
+							<div class="card-body">
+								<h5 class="card-title">Point of Sale System</h5>
+								<p class="card-text">
+									Transactions of a nail salon, including an admin page where editing of services, employees, and their details can take place.
+								</p>
+							</div>
+							<div class="card-body card-body-links">
+								<a href="#" class="card-link">Link to project</a>
+								<a href="#" class="card-link" data-toggle="modal" data-target="#p1Modal">More details</a>
+							</div>
+						</div>
+					</div>
+					<!-- spacing column -->
+					<div class="col spacers"></div>
+					<!-- second project card -->
+					<div class="col">
+						<div class="card" style="width: 18rem;">
+							<img class="card-img-top" src="./images/mountain-side-2.jpg" alt="Card image cap">
+							<div class="card-body">
+								<h5 class="card-title">Second project</h5>
+								<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+							</div>
+							<div class="card-body card-body-links">
+								<a href="#" class="card-link">Link to project</a>
+								<a href="#" class="card-link">More details</a>
+							</div>
+						</div>
+					</div>
+					<!-- spacing column -->
+					<div class="col spacers"></div>
+					<!-- third project card -->
+					<div class="col">
+						<div class="card" style="width: 18rem;">
+							<img class="card-img-top" src="./images/mountain-side-2.jpg" alt="Card image cap">
+							<div class="card-body">
+								<h5 class="card-title">Third project</h5>
+								<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+							</div>
+							<div class="card-body card-body-links">
+								<a href="#" class="card-link">Link to project</a>
+								<a href="#" class="card-link">More details</a>
+							</div>
+						</div>
+					</div>
+					<!-- spacing column -->
+					<div class="col spacers"></div>
+				</div>
+			</div>
+		
+			<!-- Modal for first project "more details" -->
+			<div class="modal fade" id="p1Modal" tabindex="-1" role="dialog" aria-labelledby="" aria-hidden="true">
+				<div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+					<h5 class="modal-title" id="exampleModalLabel">More In Depth:</h5>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+					</div>
+					<div class="modal-body">
+						<p class="pb-3"><b>Description:</b></p>
+						<p class="pb-3">A point of sales system for a nail salon called Gorgeous Nails. It allows customer checkout for
+							services they want (e.g. nails, pedicure, etc.) and keeps track of orders. There is an admin page 
+							included (with username and password authorization) that leads to the admin page with various 
+							functionality: add, remove, and edit employee and service details. Functionality also includes 
+							viewing all orders.
+						</p>
+						<p class="pb-3"><b>Used software technology:</b></p>
+						<ul class="project-description pl-2">
+							<p class="pb-2"><i>HTML</i></p>
+							<li class="pb-2 ml-4">Initial index.html (home page) of project</li>
+							<li class="pb-2 ml-4">Admin login and admin page but later converted to embedded javascript
+													templating (EJS) file format</li>
+							<p class="pb-2"><i>CSS</i></p>
+							<li class="pb-2 ml-4">Styling of elements, including formatting, visual display, and hovering</li>
+							<p class="pb-2"><i>JavaScript</i></p>
+							<li class="pb-2 ml-4">Document Object Model (DOM) manipulation</li>
+							<li class="pb-2 ml-4">Click functionality of elements (buttons, dropdown lists, page tabs)</li>
+							<p class="pb-2"><i>JQuery</i></p>
+							<li class="pb-2 ml-4">Used similarly to JavaScript, and used initially but ended up using JS 
+													more often</li>
+							<li class="pb-2 ml-4">Specifically needed for Bootstrap modal manipulation (didn't work with
+													just JavaScript)</li>
+							<p class="pb-2"><i>Node.js</i></p>
+							<li class="pb-2 ml-4">Acted as initial local server for development</li>
+							<li class="pb-2 ml-4">Node package manager (npm) used to install packages (e.g. Express, Mongoose)</li>
+							<p class="pb-2"><i>MongoDB</i></p>
+							<li class="pb-2 ml-4">NoSQL database to hold information for various collections: orders,
+													nails services, pedicure services, employees and managers</li>
+							<p class="pb-2"><i>Mongoose</i></p>
+							<li class="pb-2 ml-4">Backend library for MongoDB and Node.js to handle modeling of collections
+													in MongoDB database for project</li>
+							<p class="pb-2"><i>Express.js</i></p>
+							<li class="pb-2 ml-4">Node.js framework to handle routes, as well as handling requests and views</li>
+							<p class="pb-2"><i>Visual Studio Code</i></p>
+							<li class="pb-2 ml-4">Utilized integrated development environment for coding</li>
+						</ul>
+					</div>
+					<div class="modal-footer">
+					<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+					</div>
+				</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- PHOTOGRAPHY SECTION -->
+		<section class="photography">
+			<div class="container  marginTop">
+				<div class="row sectionTitle">
+					<h1><span id="photosAnchor"></span>Photo Gallery</h1>
+				</div>
+				<div class="row">
+					<div class="col-4 photoGalleryPic text-center">
+						<img src="images/photo_gallery/11.jpg"  id="img1" alt="My sister's dog, Sophie">
+					</div>
+					<div class="col-4 photoGalleryPic text-center">
+						<img src="images/photo_gallery/2.jpg" id="img2" alt="Field somewhere in Massanutten, Virgina">
+					</div>
+					<div class="col-4 photoGalleryPic text-center">
+						<img src="images/photo_gallery/3.jpg" id="img3" alt="Bridge view of river in Massanutten, Virginia">
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-4 photoGalleryPic mt-4">
+						<img src="images/photo_gallery/4.jpg" id="img4" alt="Over field view in Massanutten, Virginia">
+					</div>
+					<div class="col-4 photoGalleryPic mt-4">
+						<img src="images/photo_gallery/6.jpg" id="img5" alt="Shoreside in Singapore or Maylasia">
+					</div>
+					<div class="col-4 photoGalleryPic mt-4">
+						<img src="images/photo_gallery/7.jpg" id="img6" alt="Temple in Singapore, Maylasia, or Thailand">
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-4 photoGalleryPic mt-4 mb-4">
+						<img src="images/photo_gallery/9.jpg" id="img7" alt="Lakeside somewhere in Singapore">
+					</div>
+					<div class="col-4 photoGalleryPic mt-4 mb-4">
+						<img src="images/photo_gallery/10.jpg" id="img8" alt="Under trees during a rainy day">
+					</div>
+					<div class="col-4 photoGalleryPic mt-4 mb-4">
+						<img src="images/photo_gallery/1.jpg" id="img9" alt="Mountain side view">
+					</div>
+				</div>
+			</div>
+		
+			<!-- Modal for pictures in gallery -->
+			<!-- First row -->
+			<div id="mod1" class="modal">
+				<span class="close">&times;</span>
+				<img class="modal-content" id="modalImg1">
+				<div id="cap1" class="caption"></div>
+			</div>
+			<div id="mod2" class="modal">
+				<span class="close">&times;</span>
+				<img class="modal-content" id="modalImg2">
+				<div id="cap2" class="caption"></div>
+			</div>
+			<div id="mod3" class="modal">
+				<span class="close">&times;</span>
+				<img class="modal-content" id="modalImg3">
+				<div id="cap3" class="caption"></div>
+			</div>
+			<!-- second row -->
+			<div id="mod4" class="modal">
+				<span class="close">&times;</span>
+				<img class="modal-content" id="modalImg4">
+				<div id="cap4" class="caption"></div>
+			</div>
+			<div id="mod5" class="modal">
+				<span class="close">&times;</span>
+				<img class="modal-content" id="modalImg5">
+				<div id="cap5" class="caption"></div>
+			</div>
+			<div id="mod6" class="modal">
+				<span class="close">&times;</span>
+				<img class="modal-content" id="modalImg6">
+				<div id="cap6" class="caption"></div>
+			</div>
+			<!-- third row -->
+			<div id="mod7" class="modal">
+				<span class="close">&times;</span>
+				<img class="modal-content" id="modalImg7">
+				<div id="cap7" class="caption"></div>
+			</div>
+			<div id="mod8" class="modal">
+				<span class="close">&times;</span>
+				<img class="modal-content" id="modalImg8">
+				<div id="cap8" class="caption"></div>
+			</div>
+			<div id="mod9" class="modal">
+				<span class="close">&times;</span>
+				<img class="modal-content" id="modalImg9">
+				<div id="cap9" class="caption"></div>
+			</div>		
+		</section>
+
+		<!--Section: Contact v.2-->
+		<section class="contactForm contact">
+
+			<h1 class="h1-responsive font-weight-bold text-center mt-5"><span id="contactAnchor"></span>Contact us</h1>
+			<!--Section description-->
+			<p class="text-center w-responsive mx-auto mb-5">Do you have any questions? Please feel free to contact me directly!</p>
+
+			<div class="container">
+				<div class="row">
+
+					<!--Grid column-->
+					<div class="col-md-9 mb-md-0 mb-5">
+						<form id="contact-form" name="contact-form" action="mail.php" method="POST">
+	
+							<!--Grid row-->
+							<div class="row">
+	
+								<!--Grid column-->
+								<div class="col-md-6">
+									<div class="md-form mb-0">
+										<label for="name" class="">Your name</label>
+										<input type="text" id="name" name="name" class="form-control">
+										
+									</div>
+								</div>
+								<!--Grid column-->
+	
+								<!--Grid column-->
+								<div class="col-md-6">
+									<div class="md-form mb-0">
+										<label for="email" class="">Your email</label>
+										<input type="text" id="email" name="email" class="form-control">
+										
+									</div>
+								</div>
+								<!--Grid column-->
+	
+							</div>
+							<!--Grid row-->
+	
+							<!--Grid row-->
+							<div class="row">
+								<div class="col-md-12">
+									<div class="md-form mb-0 mt-2">
+										<label for="subject" class="">Subject</label>
+										<input type="text" id="subject" name="subject" class="form-control">
+										
+									</div>
+								</div>
+							</div>
+							<!--Grid row-->
+	
+							<!--Grid row-->
+							<div class="row">
+	
+								<!--Grid column-->
+								<div class="col-md-12">
+	
+									<div class="md-form mt-2">
+										<label for="message">Your message</label>
+										<textarea type="text" id="message" name="message" rows="2" class="form-control md-textarea"></textarea>
+										
+									</div>
+	
+								</div>
+							</div>
+							<!--Grid row-->
+	
+						</form>
+	
+						<div class="text-center text-md-left">
+							<a class="btn btn-primary mt-3 mb-5 contactSend" onclick="validateForm();">Send</a>
+						</div>
+						<div class="status"></div>
+					</div>
+					<!--Grid column-->
+	
+					<!--Grid column-->
+					<div class="col-md-3 text-center">
+						<ul class="list-unstyled mb-0">
+							<li><i class="fas fa-map-marker-alt fa-2x"></i>
+								<p>Germantown, MD 20876, USA</p>
+							</li>
+	
+							<!-- <li><i class="fas fa-phone mt-4 fa-2x"></i>
+								<p>+ 01 234 567 89</p>
+							</li> -->
+	
+							<li><i class="fas fa-envelope mt-4 fa-2x"></i>
+								<p>kelvinahuynh@gmail.com</p>
+							</li>
+						</ul>
+					</div>
+					<!--Grid column-->
+	
+				</div>
+			</div>
+			
+
+		</section>
+		
+	</main>
+	
     <footer class="page-footer">
 		<div class="wrapper">
 			<div class="footer-col">

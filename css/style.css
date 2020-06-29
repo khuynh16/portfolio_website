@@ -1,5 +1,10 @@
 /* BASE STYLING */
 
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
 body {
 	font-family: "Helvetica Neue", Arial, sans-serif;
 	/* font-size: 15px;
@@ -11,14 +16,15 @@ body {
 html {
     margin:0;
     padding:0;
-    width: 100%;
+    /* width: 100%; */
+    height: 100%;
 } 
 
-/* main {
-    overflow-y: scroll;
-    -webkit-overflow-scrolling: touch;
-    flex: auto;
-} */
+main {
+    max-width: 100%;
+    padding: 0;
+    margin: 0;
+}
 
 .wrapper {
 	width: 1120px;
@@ -170,7 +176,7 @@ html {
 
 /*============BANNER===============*/
 .banner {
-    height: 600px;
+    height: 660px;
     width: 100vw;
     background: url(../images/mountain-side-2.jpg);
     background-size: cover;
@@ -179,6 +185,9 @@ html {
     /* background-origin: padding-box;  */
     padding-top: 66px;          /* moves front page text down a bit */
     /* box-sizing: border-box;      keeps footer from popping too far below */
+    max-width: 100%; 
+    float:left;
+    clear:none;  
 }
 
 .banner-block {
@@ -327,7 +336,8 @@ h4 {
 
 /* Projects.html styling */
 .firstRow {
-    padding-top: 180px;
+    /* padding-top: 40px; */
+    padding-bottom: 30px;
 }
 
 .card-body-links {
@@ -384,22 +394,24 @@ h4 {
 }
 
 .about {
-    padding-top: 0.1px;
-    background-color: #1F6D63;
-}
-
-.whiteText {
-    color: white;
+    /* padding-top: 0.1px; */
+    background-color: rgb(199, 224, 214);
+    padding-bottom: 10px;
     font-size: 18px;
+    float: right;
+    clear:none; 
+    width: 100%; 
+    /* margin-top: -20px; */
+
 }
 
 .aboutBtn {
-    color: white;
+    color: black;
     text-decoration: underline;
 }
 
 .aboutBtn:hover {
-    color: black;
+    color: #1F6D63;
 }
 
 .favPhoto {
@@ -412,8 +424,8 @@ h4 {
     font-size: 13px;
 }
 
-.whiteHR {
-    background-color: white;
+.blackHR {
+    background-color: black;
 }
 
 /* PHOTOGRAPHY.HTML STYLING */
@@ -445,12 +457,17 @@ h4 {
   cursor: pointer;
 }
 
+.photography {
+    background-color: rgb(199, 224, 214);
+    margin-top: -20px;
+}
+
 /* The Modal (background) */
 .photography .modal {
     display: none; /* Hidden by default */
     position: fixed; /* Stay in place */
     z-index: 1; /* Sit on top */
-    padding-top: 150px; /* Location of the box */
+     /* Location of the box */
     left: 0;
     top: 0;
     width: 100%; /* Full width */
@@ -458,26 +475,56 @@ h4 {
     /* overflow: auto; Enable scroll if needed */
     background-color: rgb(0,0,0); /* Fallback color */
     background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
-  }
+}
 
 /* Modal Content (image) */
 .photography .modal-content {
+    /* margin-bottom: -50px; */
     margin: auto;
     display: block;
     width: 80%;
     max-width: 700px;
+    position: relative;         /* position with top move image down */
+    top: 120px;
+    border:10px outset silver;
 }
   
 /* Caption of Modal Image */
 .caption {
-margin: auto;
-display: block;
-width: 80%;
-max-width: 700px;
-text-align: center;
-color: #ccc;
-padding: 10px 0;
-height: 150px;
+    margin: auto;
+    display: block;
+    width: 80%;
+    text-align: center;
+    color: #ccc;
+    padding: 20px 0;
+    position: relative;         /* position caption below image */
+    top: 120px;
+}
+
+.sectionTitle {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    display: table; 
+    text-align:center; 
+    width:100%;
+    margin-top: -110px;
+}
+
+.sectionTitle h1 {
+    display: table-cell; 
+    margin: 0;
+    padding: 0;
+    position: relative;
+}
+
+.sectionTitle h1 span {
+    position: absolute;
+    top: -80px;
+}
+
+.projects {
+    background-color: #5db9ad;
+    padding-bottom: 40px;
 }
 
 
