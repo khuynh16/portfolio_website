@@ -88,10 +88,52 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
         e.preventDefault();
 
+        console.log(this);
+
+
+        // remove all underline from a links
+        document.querySelectorAll('a').forEach(link => {
+            link.classList.remove('active-nav');
+        })
+
+        this.classList.add('active-nav');
+
         document.querySelector(this.getAttribute('href')).scrollIntoView({
             behavior: 'smooth'
-        });
+        }); 
     });
 });
+
+// change css of navbar when reaching certain anchors
+window.addEventListener('scroll', function(e) {
+
+    e.preventDefault();
+    console.log(window.pageYOffset);
+
+    if (window.pageYOffset === 0) {
+        removeAllActiveNavClasses();
+        document.querySelector('.homeNav').classList.add('active-nav');
+    } else if (window.pageYOffset >= 620 && window.pageYOffset < 1400) {
+        removeAllActiveNavClasses();
+        document.querySelector('.aboutNav').classList.add('active-nav');
+    } else if (window.pageYOffset >= 1400 && window.pageYOffset < 2000) {
+        removeAllActiveNavClasses();
+        document.querySelector('.projectsNav').classList.add('active-nav');
+    } else if (window.pageYOffset >= 2000 && window.pageYOffset < 2710) {
+        removeAllActiveNavClasses();
+        document.querySelector('.photosNav').classList.add('active-nav');
+    } else if (window.pageYOffset >= 2710) {
+        removeAllActiveNavClasses();
+        document.querySelector('.contactNav').classList.add('active-nav');
+    }
+    
+})
+
+function removeAllActiveNavClasses() {
+    document.querySelectorAll('a').forEach(link => {
+        link.classList.remove('active-nav');
+    })
+}
+
 
 
