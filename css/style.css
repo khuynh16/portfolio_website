@@ -7,16 +7,12 @@
 }
 body {
 	font-family: "Helvetica Neue", Arial, sans-serif;
-	/* font-size: 15px;
-    line-height: 1.4; */
-    /* background-color: #111111; */
     height: 100%;
 }
 
 html {
     margin:0;
     padding:0;
-    /* width: 100%; */
     height: 100%;
 } 
 
@@ -427,79 +423,146 @@ h4 {
 .blackHR {
     background-color: black;
 }
-
-/* PHOTOGRAPHY.HTML STYLING */
-.photoGalleryPic img {
-    width: 100%;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: 0.3s; 
+/*****************************************************************************************************/
+                                    /* PHOTO GALLERY STYLING */
+/*****************************************************************************************************/
+.slider {
+    width: 750px;
+    text-align: center;
+    overflow: hidden;
 }
 
-.photoGalleryPic img:hover {
+.slides {
+    display: flex;
+}
+
+.slides > div {
+flex-shrink: 0;
+width: 750px;
+height: 500px;
+position: relative;
+
+display: flex;
+justify-content: center;
+align-items: center;
+font-size: 100px;
+}
+
+#mainSlide {
+    border: 10px solid;
+    border-image-slice: 1;
+    border-width: 2px;
+    border-image-source: linear-gradient(to left, black, grey);
+}
+
+/* mini pictures in the side bar */
+.slide1 {
+    background: url('../images/photo_gallery/1.jpg');
+}
+
+.slide2 {
+    background: url('../images/photo_gallery/2.jpg');
+}
+
+.slide3 {
+    background: url('../images/photo_gallery/3.jpg');
+}
+
+.slide4 {
+    background: url('../images/photo_gallery/4.jpg');
+}
+
+.slide5 {
+    background: url('../images/photo_gallery/5.jpg');
+}
+
+.slide6 {
+    background: url('../images/photo_gallery/6.jpg');
+}
+
+.slide7 {
+    background: url('../images/photo_gallery/7.jpg');
+}
+
+.slide8 {
+    background: url('../images/photo_gallery/8.jpg');
+}
+
+.slide9 {
+    background: url('../images/photo_gallery/9.jpg');
+}
+
+.slide10 {
+    background: url('../images/photo_gallery/10.jpg');
+}
+
+.slide1, 
+.slide2,
+.slide3, 
+.slide4, 
+.slide5,
+.slide6, 
+.slide7,
+.slide8, 
+.slide9, 
+.slide10 {
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100px;
+    height: 100px;
+}
+
+
+
+.photography img {
+    object-fit: cover;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    /* top: 0; */
+}
+
+.photography a {
+    display: inline-flex;
+    /* width: 1.5rem;
+    height: 1.5rem; */
+    align-items: center;
+    justify-content: center;
+    margin: 0 0 0.5rem 0;
+    position: relative;
+}
+    
+.photography a:hover {
     opacity: 0.7;
 }
-
-/* The Close Button when clicking on individual pictures */
-.close {
-    position: absolute;
-    top: 105px;
-    right: 35px;
-    color: #f1f1f1;
-    font-size: 40px;
-    font-weight: bold;
-    transition: 0.3s;
+    
+.square {
+    height: 100px;
+    width: 100px;
+    border: 1px solid black;
 }
 
-.close:hover, .close:focus {
-  color: #bbb;
-  text-decoration: none;
-  cursor: pointer;
+.picButtons {
+    display: flex;
+    flex-direction: column;
+}
+
+.rightSide {
+    margin-left: auto !important;
 }
 
 .photography {
     background-color: rgb(199, 224, 214);
     margin-top: -20px;
+    padding-bottom: 50px;
+    /* new */
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-/* The Modal (background) */
-.photography .modal {
-    display: none; /* Hidden by default */
-    position: fixed; /* Stay in place */
-    z-index: 1; /* Sit on top */
-     /* Location of the box */
-    left: 0;
-    top: 0;
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
-    /* overflow: auto; Enable scroll if needed */
-    background-color: rgb(0,0,0); /* Fallback color */
-    background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
-}
+/* end of new stuff */
 
-/* Modal Content (image) */
-.photography .modal-content {
-    /* margin-bottom: -50px; */
-    margin: auto;
-    display: block;
-    width: 80%;
-    max-width: 700px;
-    position: relative;         /* position with top move image down */
-    top: 120px;
-    border:10px outset silver;
-}
-  
-/* Caption of Modal Image */
-.caption {
-    margin: auto;
-    display: block;
-    width: 80%;
-    text-align: center;
-    color: #ccc;
-    padding: 20px 0;
-    position: relative;         /* position caption below image */
-    top: 120px;
-}
 
 .sectionTitle {
     padding-top: 50px;
@@ -527,18 +590,5 @@ h4 {
     padding-bottom: 40px;
 }
 
-/* THIS WAS FOR TEXT OVER HOVERING IMAGE */
-/* .alt-center {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: white;
-    opacity: 0;
-}
-
-.alt-center:hover {
-    opacity: 1;
-} */
 
 
