@@ -1,25 +1,22 @@
-/* BASE STYLING */
-
+/*****************************************************************************************************/
+                                    /* BASE STYLING */
+/*****************************************************************************************************/
 * {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
 }
-body {
-	font-family: "Helvetica Neue", Arial, sans-serif;
+
+body, html {
     height: 100%;
 }
 
-html {
-    margin:0;
-    padding:0;
-    height: 100%;
-} 
+body {
+	font-family: "Helvetica Neue", Arial, sans-serif;
+}
 
 main {
     max-width: 100%;
-    padding: 0;
-    margin: 0;
 }
 
 .wrapper {
@@ -29,14 +26,77 @@ main {
     display: flex;
 }
 
-/*============HEADER STYLE===============*/
+.sectionTitle {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    display: table; 
+    text-align:center; 
+    width:100%;
+    margin-top: -110px;
+}
+
+.sectionTitle h1 {
+    display: table-cell; 
+    margin: 0;
+    padding: 0;
+    position: relative;
+}
+
+.sectionTitle h1 span {
+    position: absolute;
+    top: -80px;
+}
+
+/*****************************************************************************************************/
+                                    /* RESPONSIVE STYLING */
+/*****************************************************************************************************/
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (max-width: 768px) {
+
+}
+
+/* inbetween */
+@media only screen and (max-width: 850px) {
+    .main-nav li {
+        margin-left: 10px !important;
+    }
+   
+    .page-header .main-nav {
+        margin-left: 10px !important;
+    }   
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (max-width: 992px) {
+    .main-nav li {
+        margin-left: 30px !important;
+    }
+   
+    .page-header .main-nav {
+        margin-left: 30px !important;
+    }   
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (max-width: 1200px) {
+    .main-nav li {
+        margin-left: 50px;
+    }
+
+    .page-header .main-nav {
+        margin-left: 50px;
+    }
+}
+
+/*****************************************************************************************************/
+                                    /* HEADER STYLING */
+/*****************************************************************************************************/
 .page-header {
 	height: 10%;
 	width: 100vw;
     position: fixed;
     background-color: #111111;
-    z-index: 100;   /* so animation of text goes behind page header */
-    /* flex: none; */
+    z-index: 100;                    /* so animation of text goes behind page header */
 }
 
 .page-header .logo {
@@ -78,109 +138,15 @@ main {
     list-style: none;
 }
 
-/* Medium devices (landscape tablets, 768px and up) */
-@media only screen and (max-width: 768px) {
-
-}
-
-/* inbetween */
-@media only screen and (max-width: 850px) {
-    .main-nav li {
-        margin-left: 10px !important;
-    }
-   
-
-    .page-header .main-nav {
-        margin-left: 10px !important;
-    }   
-    
-}
-
-/* Large devices (laptops/desktops, 992px and up) */
-@media only screen and (max-width: 992px) {
-    .main-nav li {
-        margin-left: 30px !important;
-    }
-   
-
-    .page-header .main-nav {
-        margin-left: 30px !important;
-    }   
-    
-}
-
-/* Extra large devices (large laptops and desktops, 1200px and up) */
-@media only screen and (max-width: 1200px) {
-    .main-nav li {
-        margin-left: 50px;
-    }
-
-    .page-header .main-nav {
-        margin-left: 50px;
-    }
-}
-
-/* @media screen and (max-width:1240px) {
-    .main-nav li {
-        margin-left: 50px;
-    }
-
-    .page-header .main-nav {
-        margin-right: 50px;
-    }
-}
-
-@media screen and (max-width:1160px) {
-    .main-nav li {
-        margin-left: 30px;
-    }
-
-    .page-header .main-nav {
-        margin-right: 90px;
-    }
-}
-
-@media screen and (max-width:1060px) {
-    .page-header .main-nav {
-        margin-right: 190px;
-    }
-}
-
-@media screen and (max-width:960px) {
-    .page-header .main-nav {
-        margin-right: 300px;
-    }
-}
-
-@media screen and (max-width:850px) {
-    .main-nav li {
-        margin-left: 10px;
-    }
-
-    .page-header .main-nav {
-        margin-right: 350px;
-    }
-}
-
-
-@media screen and (max-width:768px) {
-    body {
-        display: none;
-    }
-} */
-
-
-/*============BANNER===============*/
+/*****************************************************************************************************/
+                                    /* BANNER/FRONT PAGE STYLING */
+/*****************************************************************************************************/
 .banner {
     height: 660px;
     width: 100vw;
     background: url(../images/mountain-side-2.jpg);
     background-size: cover;
-    /* background-position: 0 66px; */
-    /* background-repeat: no-repeat; */
-    /* background-origin: padding-box;  */
-    padding-top: 66px;          /* moves front page text down a bit */
-    /* box-sizing: border-box;      keeps footer from popping too far below */
+    padding-top: 66px;                                
     max-width: 100%; 
     float:left;
     clear:none;  
@@ -261,128 +227,11 @@ main {
 @keyframes fadeIn {
     0% {visibility: hidden; opacity: 0;}
     100% {visibility: visible; opacity: 1;}
- }
-
-/*============Footer===============*/
-.page-footer {
-	background: #111111;
-    padding-top: 9px;
-    overflow: auto;
-    color: #fff;
-    /* width: 100vw; */
-    /* flex: none; */
 }
 
-.footer-col {
-    width: 25%;
-    float: left;            /* allows the column texts to be horizontally, rather than vertical */
-    text-align: center;     /* centers text in div */
-    line-height: 21px;      /* 21px is height on div, so line-height of 21px vertically aligns items in div */
-    background-color: #111111;
-}
-
-.page-footer h3, .footer-col h3 {
-	font-size: 12px;
-    text-transform: uppercase;
-    display: inline-block;
-    vertical-align: middle;
-    line-height: 40px;
-}
-
-.page-footer li {
-	font-size: 13px;
-	color: #999;
-	line-height: 1.6;
-}
-
-.page-footer li:hover {
-	color: #fff;
-	cursor: pointer;
-}
-
-.copy {
-	color: #585858;
-	margin-top: 32px;
-}
-
-.social a {
-	display: inline-block;
-	width: 35px;
-	height: 35px;
-	border-radius: 50%;
-	background: #000;
-	color: #fff;
-    /* text-align: center; */
-    line-height: 40px;
-}
-
-.social a:hover {
-	background: #fff;
-	color: #22D7B6;
-}
-
-#links {
-    margin-left: 10px;  /* moves social links left */
-    /* margin-top: 1px;  */
-}
-
-h4 {
-    padding-top: 66px;  /* to have text pop below header */
-}
-
-/* Projects.html styling */
-.firstRow {
-    /* padding-top: 40px; */
-    padding-bottom: 30px;
-}
-
-.card-body-links {
-    margin: auto;
-}
-
-/* transforms size of hovered item */
-.firstRow:hover > *:hover {
-    /* opacity: 1; */
-    transform: scale(1.1);
-}
-
-.card-img-top {
-    border: 1px solid black;
-    width: 100%;
-    height: 11vw;
-    object-fit: cover;
-}
-
-/* Following two style elements allow scroll bar on modal */
-.modal-dialog{
-    overflow-y: initial !important
-}
-.modal-body{
-    height: 350px;
-    overflow-y: auto;
-}
-
-/* CONTACT.HTML STYLING */
-
-.marginTop {
-    margin-top: 8%;
-}
-
-/* puts little padding above nav bar, otherwise it doesn't work as intended (in contact.html) */
-.contact {
-    padding-top: 0.1px;
-    background-color: #1F6D63;
-}
-
-.contactSend {
-    color: white !important;
-}
-
-.contactForm {
-    color: white;
-}
-
-/* ABOUT.HTML STYLING */
+/*****************************************************************************************************/
+                                    /* ABOUT STYLING */
+/*****************************************************************************************************/
 .myHeadshot {
     height: auto;
     width: 50%;
@@ -390,15 +239,12 @@ h4 {
 }
 
 .about {
-    /* padding-top: 0.1px; */
     background-color: rgb(199, 224, 214);
     padding-bottom: 10px;
     font-size: 18px;
     float: right;
     clear:none; 
     width: 100%; 
-    /* margin-top: -20px; */
-
 }
 
 .aboutBtn {
@@ -423,9 +269,52 @@ h4 {
 .blackHR {
     background-color: black;
 }
+
+/*****************************************************************************************************/
+                                    /* PROJECTS STYLING */
+/*****************************************************************************************************/
+.projects {
+    background-color: #5db9ad;
+    padding-bottom: 40px;
+}
+
+.firstRow {
+    /* padding-top: 40px; */
+    padding-bottom: 30px;
+}
+
+.card-body-links {
+    margin: auto;
+}
+
+/* transforms size of hovered item */
+.firstRow:hover > *:hover {
+    transform: scale(1.1);
+}
+
+.card-img-top {
+    border: 1px solid black;
+    width: 100%;
+    height: 11vw;
+    object-fit: cover;
+}
+
+/* Following two style elements allow scroll bar on modal */
+.modal-dialog{
+    overflow-y: initial !important
+}
+.modal-body{
+    height: 350px;
+    overflow-y: auto;
+}
+
 /*****************************************************************************************************/
                                     /* PHOTO GALLERY STYLING */
 /*****************************************************************************************************/
+.marginTop {
+    margin-top: 8%;
+}
+
 .slider {
     width: 750px;
     text-align: center;
@@ -512,20 +401,15 @@ font-size: 100px;
     height: 100px;
 }
 
-
-
 .photography img {
     object-fit: cover;
     position: absolute;
     width: 100%;
     height: 100%;
-    /* top: 0; */
 }
 
 .photography a {
     display: inline-flex;
-    /* width: 1.5rem;
-    height: 1.5rem; */
     align-items: center;
     justify-content: center;
     margin: 0 0 0.5rem 0;
@@ -561,34 +445,84 @@ font-size: 100px;
     justify-content: center;
 }
 
-/* end of new stuff */
-
-
-.sectionTitle {
-    padding-top: 50px;
-    padding-bottom: 50px;
-    display: table; 
-    text-align:center; 
-    width:100%;
-    margin-top: -110px;
+/*****************************************************************************************************/
+                                    /* CONTACT SECTION STYLING */
+/*****************************************************************************************************/
+/* puts little padding to fill in space; somehow without it, it doesn't work*/
+.contact {
+    padding-top: 0.1px;
+    background-color: #1F6D63;
 }
 
-.sectionTitle h1 {
-    display: table-cell; 
-    margin: 0;
-    padding: 0;
-    position: relative;
+.contactSend {
+    color: white !important;
 }
 
-.sectionTitle h1 span {
-    position: absolute;
-    top: -80px;
+.contactForm {
+    color: white;
 }
 
-.projects {
-    background-color: #5db9ad;
-    padding-bottom: 40px;
+/*****************************************************************************************************/
+                                    /* FOOTER STYLING */
+/*****************************************************************************************************/
+.page-footer {
+	background: #111111;
+    padding-top: 9px;
+    overflow: auto;
+    color: #fff;
 }
 
+.footer-col {
+    width: 25%;
+    float: left;            /* allows the column texts to be horizontally, rather than vertical */
+    text-align: center;     /* centers text in div */
+    line-height: 21px;      /* 21px is height on div, so line-height of 21px vertically aligns items in div */
+    background-color: #111111;
+}
 
+.page-footer h3, .footer-col h3 {
+	font-size: 12px;
+    text-transform: uppercase;
+    display: inline-block;
+    vertical-align: middle;
+    line-height: 40px;
+}
 
+.page-footer li {
+	font-size: 13px;
+	color: #999;
+	line-height: 1.6;
+}
+
+.page-footer li:hover {
+	color: #fff;
+	cursor: pointer;
+}
+
+.copy {
+	color: #585858;
+	margin-top: 32px;
+}
+
+.social a {
+	display: inline-block;
+	width: 35px;
+	height: 35px;
+	border-radius: 50%;
+	background: #000;
+	color: #fff;
+    line-height: 40px;
+}
+
+.social a:hover {
+	background: #fff;
+	color: #22D7B6;
+}
+
+#links {
+    margin-left: 10px;  /* moves social links left */
+}
+
+h4 {
+    padding-top: 66px;  /* to have text pop below header */
+}

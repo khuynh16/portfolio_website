@@ -29,33 +29,6 @@ function validateForm() {
     document.querySelector('.status').innerHTML = "Sending...";
   }
 
-// for photography.html
-
-// for (let i = 0; i < 9; i++) {
-//     var modal = document.getElementById("mod" + (i + 1));
-
-//     var img = document.getElementById("img" + (i + 1));
-//     var modalImg = document.getElementById("modalImg" + (i + 1));
-//     var captionText = document.getElementById("cap" + (i + 1));
-
-//     img.onclick = function(){
-//         modal.style.display = "block";
-//         modalImg.src = this.src;
-//         captionText.innerHTML = this.alt;
-//     }
-// }
-
-// Get the <span> element that closes the modal
-// for some reason, value in brackets has to be one less than total number of pics in photo gallery 
-// to have close button work
-// var span = document.getElementsByClassName("close")[9];
-// console.log(span);
-
-// When the user clicks on <span> (x), close the modal
-// span.onclick = function() { 
-//     modal.style.display = "none";
-// }
-
 // FOR CONTACT FORM
 // document.getElementById('status').innerHTML = "Sending...";
 // formData = {
@@ -106,7 +79,6 @@ document.querySelectorAll('a[href^="#"][href$="Anchor"]').forEach(anchor => {
 
 // change css of navbar when reaching certain anchors
 window.addEventListener('scroll', function(e) {
-
     e.preventDefault();
     console.log(window.pageYOffset);
 
@@ -126,7 +98,6 @@ window.addEventListener('scroll', function(e) {
         removeAllActiveNavClasses();
         document.querySelector('.contactNav').classList.add('active-nav');
     }
-    
 })
 
 function removeAllActiveNavClasses() {
@@ -135,10 +106,7 @@ function removeAllActiveNavClasses() {
     })
 }
 
-// for photo gallery
-
-let mainSlide = document.querySelector('#mainSlide');
-
+// for photo gallery section
 let pic1 = document.querySelector('.slide1');
 let pic2 = document.querySelector('.slide2');
 let pic3 = document.querySelector('.slide3');
@@ -149,47 +117,12 @@ let pic7 = document.querySelector('.slide7');
 let pic8 = document.querySelector('.slide8');
 let pic9 = document.querySelector('.slide9');
 let pic10 = document.querySelector('.slide10');
+let mainSlide = document.querySelector('#mainSlide');
+let photoGalleryPics = document.getElementsByClassName('pgPic');
 
-pic1.addEventListener('mouseover', function(e) {
-    e.preventDefault();
-    mainSlide.src = 'images/photo_gallery/1.jpg';
-})
-pic2.addEventListener('mouseover', function(e) {
-    e.preventDefault();
-    mainSlide.src = 'images/photo_gallery/2.jpg'; 
-})
-pic3.addEventListener('mouseover', function(e) {
-    e.preventDefault();
-    mainSlide.src = 'images/photo_gallery/3.jpg'; 
-})
-pic4.addEventListener('mouseover', function(e) {
-    e.preventDefault();
-    mainSlide.src = 'images/photo_gallery/4.jpg'; 
-})
-pic5.addEventListener('mouseover', function(e) {
-    e.preventDefault();
-    mainSlide.src = 'images/photo_gallery/5.jpg'; 
-})
-pic6.addEventListener('mouseover', function(e) {
-    e.preventDefault();
-    mainSlide.src = 'images/photo_gallery/6.jpg'; 
-})
-pic7.addEventListener('mouseover', function(e) {
-    e.preventDefault();
-    mainSlide.src = 'images/photo_gallery/7.jpg'; 
-})
-pic8.addEventListener('mouseover', function(e) {
-    e.preventDefault();
-    mainSlide.src = 'images/photo_gallery/8.jpg'; 
-})
-pic9.addEventListener('mouseover', function(e) {
-    e.preventDefault();
-    mainSlide.src = 'images/photo_gallery/9.jpg'; 
-})
-pic10.addEventListener('mouseover', function(e) {
-    e.preventDefault();
-    mainSlide.src = 'images/photo_gallery/10.jpg'; 
-})
-
-
-
+for (let i = 0; i < photoGalleryPics.length; i++) {
+    photoGalleryPics[i].addEventListener('mouseover', function(e) {
+        e.preventDefault();        
+        mainSlide.src='images/photo_gallery/' + (i + 1) + '.jpg';
+    })
+}

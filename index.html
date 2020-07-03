@@ -9,6 +9,7 @@
 </head>
 <body>
 
+	<!-- navbar -->
     <header class="page-header">
 		<div class="wrapper">
 			<div class="logo">
@@ -27,6 +28,7 @@
     </header>
     
     <main id="homeAnchor">
+		<!-- home page -->
 		<div class="banner">
 			<div class="banner-block moveLeft">
 				<div class="row">
@@ -40,7 +42,7 @@
             </div>
 		</div>
 		
-		<!-- the about page -->
+		<!-- about section -->
 		<section class="about">
 			<div class="container marginTop">
 				<div class="row sectionTitle">
@@ -62,7 +64,6 @@
 							projects for more details!).</p>
 					</div>
 				</div>
-		
 				<div class="row mt-4 mb-4">
 					<div class="col-7">
 						<h2>My Interests</h2>
@@ -82,7 +83,7 @@
 			</div>
 		</section>
 
-		<!-- PROJECTS SECTION -->
+		<!-- projects section -->
 		<section class="projects">
 			<div class="container allCards">
 				<div class="row sectionTitle">
@@ -147,198 +148,161 @@
 			<!-- Modal for first project "more details" -->
 			<div class="modal fade" id="p1Modal" tabindex="-1" role="dialog" aria-labelledby="" aria-hidden="true">
 				<div class="modal-dialog modal-dialog-centered modal-lg" role="document">
-				<div class="modal-content">
-					<div class="modal-header">
-					<h5 class="modal-title" id="exampleModalLabel">More In Depth:</h5>
-					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-						<span aria-hidden="true">&times;</span>
-					</button>
+					<div class="modal-content">
+						<div class="modal-header">
+							<h5 class="modal-title" id="exampleModalLabel">More In Depth:</h5>
+							<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+								<span aria-hidden="true">&times;</span>
+							</button>
+						</div>
+						<div class="modal-body">
+							<p class="pb-3"><b>Description:</b></p>
+							<p class="pb-3">A point of sales system for a nail salon called Gorgeous Nails. It allows customer checkout for
+								services they want (e.g. nails, pedicure, etc.) and keeps track of orders. There is an admin page 
+								included (with username and password authorization) that leads to the admin page with various 
+								functionality: add, remove, and edit employee and service details. Functionality also includes 
+								viewing all orders.
+							</p>
+							<p class="pb-3"><b>Used software technology:</b></p>
+							<ul class="project-description pl-2">
+								<p class="pb-2"><i>HTML</i></p>
+								<li class="pb-2 ml-4">Initial index.html (home page) of project</li>
+								<li class="pb-2 ml-4">Admin login and admin page but later converted to embedded javascript
+														templating (EJS) file format</li>
+								<p class="pb-2"><i>CSS</i></p>
+								<li class="pb-2 ml-4">Styling of elements, including formatting, visual display, and hovering</li>
+								<p class="pb-2"><i>JavaScript</i></p>
+								<li class="pb-2 ml-4">Document Object Model (DOM) manipulation</li>
+								<li class="pb-2 ml-4">Click functionality of elements (buttons, dropdown lists, page tabs)</li>
+								<p class="pb-2"><i>JQuery</i></p>
+								<li class="pb-2 ml-4">Used similarly to JavaScript, and used initially but ended up using JS 
+														more often</li>
+								<li class="pb-2 ml-4">Specifically needed for Bootstrap modal manipulation (didn't work with
+														just JavaScript)</li>
+								<p class="pb-2"><i>Node.js</i></p>
+								<li class="pb-2 ml-4">Acted as initial local server for development</li>
+								<li class="pb-2 ml-4">Node package manager (npm) used to install packages (e.g. Express, Mongoose)</li>
+								<p class="pb-2"><i>MongoDB</i></p>
+								<li class="pb-2 ml-4">NoSQL database to hold information for various collections: orders,
+														nails services, pedicure services, employees and managers</li>
+								<p class="pb-2"><i>Mongoose</i></p>
+								<li class="pb-2 ml-4">Backend library for MongoDB and Node.js to handle modeling of collections
+														in MongoDB database for project</li>
+								<p class="pb-2"><i>Express.js</i></p>
+								<li class="pb-2 ml-4">Node.js framework to handle routes, as well as handling requests and views</li>
+								<p class="pb-2"><i>Visual Studio Code</i></p>
+								<li class="pb-2 ml-4">Utilized integrated development environment for coding</li>
+							</ul>
+						</div>
+						<div class="modal-footer">
+							<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+						</div>
 					</div>
-					<div class="modal-body">
-						<p class="pb-3"><b>Description:</b></p>
-						<p class="pb-3">A point of sales system for a nail salon called Gorgeous Nails. It allows customer checkout for
-							services they want (e.g. nails, pedicure, etc.) and keeps track of orders. There is an admin page 
-							included (with username and password authorization) that leads to the admin page with various 
-							functionality: add, remove, and edit employee and service details. Functionality also includes 
-							viewing all orders.
-						</p>
-						<p class="pb-3"><b>Used software technology:</b></p>
-						<ul class="project-description pl-2">
-							<p class="pb-2"><i>HTML</i></p>
-							<li class="pb-2 ml-4">Initial index.html (home page) of project</li>
-							<li class="pb-2 ml-4">Admin login and admin page but later converted to embedded javascript
-													templating (EJS) file format</li>
-							<p class="pb-2"><i>CSS</i></p>
-							<li class="pb-2 ml-4">Styling of elements, including formatting, visual display, and hovering</li>
-							<p class="pb-2"><i>JavaScript</i></p>
-							<li class="pb-2 ml-4">Document Object Model (DOM) manipulation</li>
-							<li class="pb-2 ml-4">Click functionality of elements (buttons, dropdown lists, page tabs)</li>
-							<p class="pb-2"><i>JQuery</i></p>
-							<li class="pb-2 ml-4">Used similarly to JavaScript, and used initially but ended up using JS 
-													more often</li>
-							<li class="pb-2 ml-4">Specifically needed for Bootstrap modal manipulation (didn't work with
-													just JavaScript)</li>
-							<p class="pb-2"><i>Node.js</i></p>
-							<li class="pb-2 ml-4">Acted as initial local server for development</li>
-							<li class="pb-2 ml-4">Node package manager (npm) used to install packages (e.g. Express, Mongoose)</li>
-							<p class="pb-2"><i>MongoDB</i></p>
-							<li class="pb-2 ml-4">NoSQL database to hold information for various collections: orders,
-													nails services, pedicure services, employees and managers</li>
-							<p class="pb-2"><i>Mongoose</i></p>
-							<li class="pb-2 ml-4">Backend library for MongoDB and Node.js to handle modeling of collections
-													in MongoDB database for project</li>
-							<p class="pb-2"><i>Express.js</i></p>
-							<li class="pb-2 ml-4">Node.js framework to handle routes, as well as handling requests and views</li>
-							<p class="pb-2"><i>Visual Studio Code</i></p>
-							<li class="pb-2 ml-4">Utilized integrated development environment for coding</li>
-						</ul>
-					</div>
-					<div class="modal-footer">
-					<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-					</div>
-				</div>
 				</div>
 			</div>
 		</section>
 
-		<!-- PHOTOGRAPHY SECTION -->
+		<!-- the photo gallery section -->
 		<section class="photography">
 			<div class="marginTop">
 				<div class="row sectionTitle">
 					<h1><span id="photosAnchor"></span>Photo Gallery</h1>
 				</div>
-
 				<div class="row">
 					<div class="col-8">
 						<div class="slider">
-						  <div class="slides">
+						  	<div class="slides">
 							  <img id="mainSlide" src="images/photo_gallery/1.jpg" alt="">
-						  </div>
+						  	</div>
 						</div>
-					  </div>
-
-					  <div class="col-2 pl-5 picButtons pr-0">
-						<a class="square rightSide slide1"></a>
-						<a class="square rightSide slide2"></a>
-						<a class="square rightSide slide3"></a>
-						<a class="square rightSide slide4"></a>
-						<a class="square rightSide slide5"></a>
-					  </div>
-					  <div class="col-2 picButtons pr-0">
-						<a  class="square rightSide slide6"></a>
-						<a  class="square rightSide slide7"></a>
-						<a  class="square rightSide slide8"></a>
-						<a  class="square rightSide slide9"></a>
-						<a  class="square rightSide slide10"></a>
-					  </div>
+					</div>
+					<div class="col-2 pl-5 picButtons pr-0">
+						<a class="square rightSide slide1 pgPic"></a>
+						<a class="square rightSide slide2 pgPic"></a>
+						<a class="square rightSide slide3 pgPic"></a>
+						<a class="square rightSide slide4 pgPic"></a>
+						<a class="square rightSide slide5 pgPic"></a>
+					</div>
+					<div class="col-2 picButtons pr-0">
+						<a  class="square rightSide slide6 pgPic"></a>
+						<a  class="square rightSide slide7 pgPic"></a>
+						<a  class="square rightSide slide8 pgPic"></a>
+						<a  class="square rightSide slide9 pgPic"></a>
+						<a  class="square rightSide slide10 pgPic"></a>
+					</div>
 				</div>
-				
 			</div>
 		</section>
 
 		<!--Section: Contact v.2-->
 		<section class="contactForm contact pb-4">
-
 			<h1 class="h1-responsive font-weight-bold text-center mt-5"><span id="contactAnchor"></span>Contact us</h1>
 			<!--Section description-->
 			<p class="text-center w-responsive mx-auto mb-5">Do you have any questions? Please feel free to contact me directly!</p>
-
 			<div class="container">
 				<div class="row">
-
 					<!--Grid column-->
 					<div class="col-md-9 mb-md-0 mb-5">
 						<form id="contact-form" name="contact-form" action="mail.php" method="POST">
-	
 							<!--Grid row-->
 							<div class="row">
-	
 								<!--Grid column-->
 								<div class="col-md-6">
 									<div class="md-form mb-0">
 										<label for="name" class="">Your name</label>
 										<input type="text" id="name" name="name" class="form-control">
-										
 									</div>
 								</div>
-								<!--Grid column-->
-	
 								<!--Grid column-->
 								<div class="col-md-6">
 									<div class="md-form mb-0">
 										<label for="email" class="">Your email</label>
 										<input type="text" id="email" name="email" class="form-control">
-										
 									</div>
 								</div>
-								<!--Grid column-->
-	
 							</div>
-							<!--Grid row-->
-	
 							<!--Grid row-->
 							<div class="row">
 								<div class="col-md-12">
 									<div class="md-form mb-0 mt-2">
 										<label for="subject" class="">Subject</label>
-										<input type="text" id="subject" name="subject" class="form-control">
-										
+										<input type="text" id="subject" name="subject" class="form-control">	
 									</div>
 								</div>
 							</div>
-							<!--Grid row-->
-	
 							<!--Grid row-->
 							<div class="row">
-	
 								<!--Grid column-->
-								<div class="col-md-12">
-	
+								<div class="col-md-12">	
 									<div class="md-form mt-2">
 										<label for="message">Your message</label>
-										<textarea type="text" id="message" name="message" rows="2" class="form-control md-textarea"></textarea>
-										
-									</div>
-	
+										<textarea type="text" id="message" name="message" rows="2" class="form-control md-textarea"></textarea>										
+									</div>	
 								</div>
-							</div>
-							<!--Grid row-->
-	
+							</div>	
 						</form>
-	
 						<div class="text-center text-md-left">
 							<a class="btn btn-primary mt-3 mb-5 contactSend" onclick="validateForm();">Send</a>
 						</div>
 						<div class="status"></div>
 					</div>
 					<!--Grid column-->
-	
-					<!--Grid column-->
 					<div class="col-md-3 text-center">
 						<ul class="list-unstyled mb-0">
 							<li><i class="fas fa-map-marker-alt fa-2x"></i>
 								<p>Germantown, MD 20876, USA</p>
 							</li>
-	
-							<!-- <li><i class="fas fa-phone mt-4 fa-2x"></i>
-								<p>+ 01 234 567 89</p>
-							</li> -->
-	
 							<li><i class="fas fa-envelope mt-4 fa-2x"></i>
 								<p>kelvinahuynh@gmail.com</p>
 							</li>
 						</ul>
 					</div>
-					<!--Grid column-->
-	
 				</div>
 			</div>
-			
-
 		</section>
-		
 	</main>
 	
+	<!-- footer -->
     <footer class="page-footer">
 		<div class="wrapper">
 			<div class="footer-col">
