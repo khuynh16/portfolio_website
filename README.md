@@ -27,5 +27,9 @@ CHANGES:
   
   -still need to update underlining of navbar anchor section when clicked and passing anchor
   
+  7/2/2020:
+  
+  -changed photo gallery design; still need to clean up code
+  
 
 
