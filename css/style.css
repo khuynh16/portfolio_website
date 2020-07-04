@@ -12,7 +12,8 @@ body, html {
 }
 
 body {
-	font-family: "Helvetica Neue", Arial, sans-serif;
+    font-family: "Poppins", "Helvetica Neue", Arial, sans-serif;
+    font-weight: 500;
 }
 
 main {
@@ -242,6 +243,7 @@ main {
     background-color: rgb(199, 224, 214);
     padding-bottom: 10px;
     font-size: 18px;
+    font-weight: bold;
     float: right;
     clear:none; 
     width: 100%; 
@@ -274,8 +276,12 @@ main {
                                     /* PROJECTS STYLING */
 /*****************************************************************************************************/
 .projects {
-    background-color: #5db9ad;
-    padding-bottom: 40px;
+    background-color: #1F6D63;
+    padding-bottom: 80px;
+}
+
+.projectsAnchor {
+    scroll-padding-top: 50px;
 }
 
 .firstRow {
@@ -525,4 +531,8 @@ font-size: 100px;
 
 h4 {
     padding-top: 66px;  /* to have text pop below header */
+}
+
+.resume:hover {
+    color: #22D7B6;
 }
