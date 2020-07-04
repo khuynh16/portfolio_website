@@ -3,9 +3,6 @@ document.querySelectorAll('a[href^="#"][href$="Anchor"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
         e.preventDefault();
 
-        console.log(this);
-
-
         // remove all underline from a links
         document.querySelectorAll('a').forEach(link => {
             link.classList.remove('active-nav');
@@ -22,7 +19,6 @@ document.querySelectorAll('a[href^="#"][href$="Anchor"]').forEach(anchor => {
 // change css of navbar when reaching certain anchors
 window.addEventListener('scroll', function(e) {
     e.preventDefault();
-    console.log(window.pageYOffset);
 
     if (window.pageYOffset === 0) {
         removeAllActiveNavClasses();
