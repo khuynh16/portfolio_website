@@ -40,7 +40,22 @@ body {
 
     /* nav bar styling */
     .nav-li-items {
-        display: none !important;
+        /* display: none !important; */
+        position: absolute;
+        right: 0px;
+        top: 60px;
+        height: 80vh;
+        width: 30%;
+        background-color: #111111;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .burger {
+        display: block !important;
+        float: right;
+        padding-right: 10%;
     }
 
     /* footer styling */
@@ -53,7 +68,6 @@ body {
     .footer-col {
         width: 50% !important;
     }
-
 
     /* projects styling */
     .firstProject, 
@@ -124,6 +138,7 @@ body {
     .col-8 {
         max-height: 280px;
     }
+
 }
 
 /* if smaller than 1090 px, do the following: */
@@ -200,6 +215,24 @@ header {
     position: fixed;
     background-color: #111111;
     z-index: 100;                    /* so animation of text goes behind page header */
+}
+
+.burger {
+    display: none;
+    cursor: pointer;
+}
+
+.burger div {
+    display: flex;
+    flex-direction: column;
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 5px;
+}
+
+.nav-active {
+    display: none !important;
 }
 
 #logo-pic {

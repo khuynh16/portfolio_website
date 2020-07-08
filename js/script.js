@@ -64,3 +64,22 @@ for (let i = 0; i < photoGalleryPics.length; i++) {
         mainSlide.src='images/photo_gallery/' + (i + 1) + '.jpg';
     })
 }
+
+let burger = document.querySelector('.burger');
+let nav = document.querySelector('.nav-li-items');
+
+burger.addEventListener('click', function(e) {
+    e.preventDefault();
+
+    nav.classList.toggle('nav-active');
+})
+
+window.addEventListener('resize', function() {
+    console.log(window.innerWidth);
+
+    if (window.innerWidth > 768 && nav.classList.contains('nav-active')) {
+        nav.classList.toggle('nav-active');
+    } else if (window.innerWidth <= 768 && !(nav.classList.contains('nav-active'))) {
+        nav.classList.toggle('nav-active');
+    }
+})
