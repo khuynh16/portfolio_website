@@ -12,11 +12,11 @@
 
 	<!-- navbar -->
     <header class="page-header">
-		<div class="wrapper">
+		<!-- <div class="wrapper"> -->
 			<div class="logo">
 				<a href="./index.html"><img src="images/logo-cropped.png" alt="Logo" id="logo-pic"></a>
 			</div>
-			<nav class="main-nav">
+			<nav>
 				<ul class="nav-li-items">
 					<li><a class="homeNav active-nav" href="#homeAnchor">Home</a></li>
 					<li><a class="aboutNav" href="#aboutAnchor">About</a></li>
@@ -25,14 +25,14 @@
 					<li><a class="contactNav" href="#contactAnchor">Contact</a></li>
 				</ul>
 			</nav>
-		</div>
+		<!-- </div> -->
     </header>
     
     <main id="homeAnchor">
 		<!-- home page -->
 		<div class="banner">
-			<div class="banner-block moveLeft">
-				<div class="row">
+			<div class="banner-block transparent">
+				<div class="row mainText">
 					<div class="banP1 main-title">Analyze.</div>
                 	<div class="banP2 main-title pl-2">Draft.</div>
                 	<div class="banP3 main-title pl-2">Create.</div>
@@ -49,37 +49,39 @@
 				<div class="row sectionTitle">
 					<h1><span id="aboutAnchor"></span>About Me</h1>
 				</div>
-				<div class="row">
-					<div class="col-5 text-center">
-						<img class="myHeadshot" src="images/headshot.jpg" alt="headshot-of-me">
-					</div>
-					<div class="col-7">
-						<h2>My Experience</h2>
-						<hr class="blackHR">
-						<p class="mt-3">I am an Information Science graduate (Dec. 2019) from University of Maryland, College Park. 
+				<div class="firstAboutSection">
+					<!-- <div class="col-5 text-center"> -->
+						<img class="myHeadshot" src="images/headshot.jpg" alt="headshot-of-me" align="left">
+					<!-- </div> -->
+					<!-- <div class="col-7"> -->
+						<h2><u>My Experience</u></h2>
+						<p class="mt-3 firstParagraph">I am an Information Science graduate (Dec. 2019) from University of Maryland, College Park. 
 							My focus in the major revolved around data analysis (Python, R, SQL) and web development 
 							(HTML, CSS, JavaScript, PHP, and SQL). However, I have been recently focusing on the latter, 
 							wanting to deal with visual design and application on a day-to-day basis. In attempt to do so, 
 							I have been learning various software technologies to see capability in my software development, 
 							revolving around current (and future) projects (<a class="aboutBtn" href="#projectsAnchor">View</a> 
 							projects for more details!).</p>
-					</div>
+					<!-- </div> -->
 				</div>
-				<div class="row mt-4 mb-4">
-					<div class="col-7">
-						<h2>My Interests</h2>
-						<hr class="blackHR">
+				<div class="secondAboutSection">
+					<!-- <div class="col-7"> -->
+						<figure align="right">
+							<img class="favPhoto" src="images/toMassanutten.jpg" alt="toMassanutten">
+							<figcaption class="figCaption mt-1">A field when driving to Massanutten, Virginia.</figcaption>
+						</figure>
+						
+						<h2><u>My Interests</u></h2>
 						<p class="mt-3">While not working on creating or developing software applications, I like to indulge in a mobile game 
 							called Summoners War (SW): one of many monster collector games on the app store. While I am nowhere 
 							near capable of creating a game such as SW, some sort of mini application could be possible. 
 							Another long term hobby of mine has been photography, more specifically, 
 							of scenery. Some examples of my favorite ones that I’ve taken via phone are located 
 							in the <a class="aboutBtn" href="#photosAnchor">‘Photography’</a> tab on this site!</p>
-					</div>
-					<div class="col-5 text-center">
-						<img class="favPhoto" src="images/toMassanutten.jpg" alt="toMassanutten">
-						<figcaption class="figCaption mt-1">A field when driving to Massanutten, Virginia.</figcaption>
-					</div>
+					<!-- </div> -->
+					<!-- <div class="col-5 text-center"> -->
+						
+					<!-- </div> -->
 				</div>
 			</div>
 		</section>
@@ -90,11 +92,11 @@
 				<div class="row sectionTitle projectTitle">
 					<h1><span id="projectsAnchor"></span>Projects</h1>
 				</div>
-				<div class="row firstRow">
+				<div class="row firstProjectRow">
 					<!-- spacing column -->
-					<div class="col spacers"></div>
+					<div class="col spacer1"></div>
 					<!-- first project card -->
-					<div class="col">
+					<div class="col firstProject">
 						<div class="card" style="width: 18rem;">
 							<img class="card-img-top" src="./images/Gorgeous_Nails_Project_Checkout.png" alt="Gorgeous Nails Checkout Page">
 							<div class="card-body">
@@ -110,9 +112,9 @@
 						</div>
 					</div>
 					<!-- spacing column -->
-					<div class="col spacers"></div>
+					<div class="col spacer2"></div>
 					<!-- second project card -->
-					<div class="col">
+					<div class="col secondProject">
 						<div class="card" style="width: 18rem;">
 							<img class="card-img-top" src="./images/mountain-side-2.jpg" alt="Card image cap">
 							<div class="card-body">
@@ -126,9 +128,9 @@
 						</div>
 					</div>
 					<!-- spacing column -->
-					<div class="col spacers"></div>
+					<div class="col spacer3"></div>
 					<!-- third project card -->
-					<div class="col">
+					<div class="col thirdProject">
 						<div class="card" style="width: 18rem;">
 							<img class="card-img-top" src="./images/mountain-side-2.jpg" alt="Card image cap">
 							<div class="card-body">
@@ -142,7 +144,7 @@
 						</div>
 					</div>
 					<!-- spacing column -->
-					<div class="col spacers"></div>
+					<div class="col spacer4"></div>
 				</div>
 			</div>
 		
@@ -209,12 +211,10 @@
 				<div class="row sectionTitle">
 					<h1><span id="photosAnchor"></span>Photo Gallery</h1>
 				</div>
-				<div class="row">
+				<div class="row photoContent">
 					<div class="col-8">
 						<div class="slider">
-						  	<div class="slides">
 							  <img id="mainSlide" src="images/photo_gallery/1.jpg" alt="">
-						  	</div>
 						</div>
 					</div>
 					<div class="col-2 pl-5 picButtons pr-0">
@@ -230,7 +230,7 @@
 						<a  class="square rightSide slide8 pgPic"></a>
 						<a  class="square rightSide slide9 pgPic"></a>
 						<a  class="square rightSide slide10 pgPic"></a>
-					</div>
+					</div>	
 				</div>
 			</div>
 		</section>

@@ -7,28 +7,20 @@
     box-sizing: border-box;
 }
 
-body, html {
-    height: 100%;
-}
-
 body {
     font-family: "Poppins", "Helvetica Neue", Arial, sans-serif;
     font-weight: 500;
 }
 
-main {
-    max-width: 100%;
-}
-
-.wrapper {
+/* .wrapper {
 	width: 1120px;
 	height: 100%;
     margin: 0 auto;
     display: flex;
-}
+} */
 
 .sectionTitle {
-    padding-top: 50px;
+    padding-top: 100px;
     padding-bottom: 50px;
     display: table; 
     text-align:center; 
@@ -51,82 +43,189 @@ main {
 /*****************************************************************************************************/
                                     /* RESPONSIVE STYLING */
 /*****************************************************************************************************/
-/* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (max-width: 768px) {
 
+    /* about styling */
+
+
+    /* projects styling */
+    .firstProject, 
+    .secondProject, 
+    .thirdProject {
+        padding-left: 110px;
+    }
+
+    /* photo gallery styling */
+    .col-2 {
+        max-width: 40% !important;  
+    }
+
+    .col-8 {
+        max-height: 280px;
+        max-width: 450px;
+        padding: 0;
+    }
+
+    .photography a {
+        width: 80px;
+        height: 70px;
+    }
+
+    .photography a:first-child {
+        margin-left: 0 !important;
+    }
+
+    .picButtons {
+        /* text-align: center; */
+        margin: 0 !important;
+    }
+
+    #mainSlide {
+        margin: auto;    
+        display: block;
+    }
 }
 
-/* inbetween */
-@media only screen and (max-width: 850px) {
-    .main-nav li {
-        margin-left: 10px !important;
+/* if smaller than 1090 px, do the following: */
+@media only screen and (max-width: 940px) {
+
+    /* photo gallery styling */
+    .photoContent {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: 500px;
     }
-   
-    .page-header .main-nav {
-        margin-left: 10px !important;
-    }   
+
+    #mainSlide {
+        height: 240px;
+    }
+
+    .picButtons {
+        display: flex;
+        flex-direction: row !important;
+    }
+
+    .photography  {
+        overflow: hidden;
+    }
+
+    .col-2 {
+        max-width: 80% !important;  /* adjust width of mini image boxes */
+    }
+
+    .col-8 {
+        max-height: 280px;
+    }
 }
 
-/* Large devices (laptops/desktops, 992px and up) */
-@media only screen and (max-width: 992px) {
-    .main-nav li {
-        margin-left: 30px !important;
+/* if smaller than 1090 px, do the following: */
+@media only screen and (max-width: 1090px) {
+
+    .firstProjectRow {
+        padding-left: 0;
+        padding-right: 0;
     }
-   
-    .page-header .main-nav {
-        margin-left: 30px !important;
-    }   
+
+    .firstProject, .secondProject {
+        padding-bottom: 20px;
+        /* padding-left: 80px; */
+    }
+
+    /* photo gallery styling */
+    .photoContent {
+        margin: 0;
+    }
+
+    .photography a {
+        margin-left: 30px !important; 
+        margin-right: 0 !important;
+    }
+
+    .picButtons {
+        padding-left: 0 !important;
+    }
+
+    .col-2 {
+        max-width: 40%;
+    }
 }
 
-/* Extra large devices (large laptops and desktops, 1200px and up) */
-@media only screen and (max-width: 1200px) {
-    .main-nav li {
-        margin-left: 50px;
+
+
+/* if smaller than 1290px, do the following:  */
+@media only screen and (max-width: 1290px) {
+
+    /* projects styling */
+    .spacer1,
+    .spacer2,
+    .spacer3,
+    .spacer4 {
+        display: none;
     }
 
-    .page-header .main-nav {
-        margin-left: 50px;
+    /* banner styling */
+    .mainText {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
     }
+
+    .banner-block {
+        margin: auto !important;
+        padding: 0 !important;   
+    }
+
+    .transparent {
+        background-color: rgba(255,255,255,0.5);
+        padding: 0px 30px 0px 30px !important;
+      }
 }
 
 /*****************************************************************************************************/
                                     /* HEADER STYLING */
 /*****************************************************************************************************/
-.page-header {
-	height: 10%;
-	width: 100vw;
+header {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    margin: auto;
     position: fixed;
     background-color: #111111;
     z-index: 100;                    /* so animation of text goes behind page header */
 }
 
-.page-header .logo {
-	float: left;
-}
-
 #logo-pic {
     height: 60px;
-    padding-top: 2.5px;
-    padding-left: 59.78px;
 }
 
-.page-header .main-nav {
-    float: right;
+.logo, .nav-li-items {
+    display: flex;
 }
 
-.main-nav li {
-	float: left;
-	margin-left: 90px;
+.logo {
+    flex: 1;
+    justify-content: center;
+    
 }
 
-.main-nav li a {
+nav {
+    flex: 2;
+    justify-content: flex-start;
+}
+
+.nav-li-items {
+    justify-content: space-around;
+    margin: 0;
+}
+
+.nav-li-items li a {
 	color: #fff;
 	text-transform: uppercase;
 	text-decoration: none;
-	line-height: 66px;
 }
 
-.main-nav li a:hover {
+nav li a:hover {
 	color: #22D7B6;
 }
 
@@ -143,33 +242,32 @@ main {
                                     /* BANNER/FRONT PAGE STYLING */
 /*****************************************************************************************************/
 .banner {
+    display: flex;
     height: 660px;
-    width: 100vw;
+    width: 100%;
+    overflow: hidden;
     background: url(../images/mountain-side-2.jpg);
-    background-size: cover;
+    background-size: cover;                        /* was 'cover' */
     padding-top: 66px;                                
-    max-width: 100%; 
-    float:left;
-    clear:none;  
+    /* max-width: 100%;  */
+    /* float:left;
+    clear:none;   */
 }
 
 .banner-block {
+    position: relative;
     padding-top: 170px;
     padding-left: 450px;
+    margin-left: 15%;
 	font-size: 60px;
 	font-weight: bold;
     text-align: center;
     color: black;
 }
 
-.banner-block .row {
-    margin: 0;
-    padding: 0;
-}
-
-.moveLeft {
+/* .moveLeft {
     margin-left: 15%;
-}
+} */
 
 .banP1 {
     display: inline-block;
@@ -235,8 +333,13 @@ main {
 /*****************************************************************************************************/
 .myHeadshot {
     height: auto;
-    width: 50%;
+    width: 20%;
     border-style: ridge;
+    margin: 15px;
+}
+
+.firstAboutSection {
+    padding-bottom: 100px;
 }
 
 .about {
@@ -259,7 +362,7 @@ main {
 }
 
 .favPhoto {
-    width: 90%;
+    width: 100%;
     height: auto;
     border-style: ridge;
 }
@@ -268,9 +371,22 @@ main {
     font-size: 13px;
 }
 
-.blackHR {
-    background-color: black;
+figure {
+    margin: 15px;
+    width: 35%;
+    float: right;
 }
+figure img {
+    vertical-align: top;
+}
+figure figcaption {
+    text-align: center;
+}
+
+/* .blackHR {
+    background-color: black;
+    float: right;
+} */
 
 /*****************************************************************************************************/
                                     /* PROJECTS STYLING */
@@ -284,7 +400,7 @@ main {
     scroll-padding-top: 50px;
 }
 
-.firstRow {
+.firstProjectRow {
     /* padding-top: 40px; */
     padding-bottom: 30px;
 }
@@ -294,7 +410,7 @@ main {
 }
 
 /* transforms size of hovered item */
-.firstRow:hover > *:hover {
+.firstProjectRow:hover > *:hover {
     transform: scale(1.1);
 }
 
@@ -322,16 +438,17 @@ main {
 }
 
 .slider {
+    display: flex;
     width: 750px;
     text-align: center;
     overflow: hidden;
 }
 
-.slides {
+/* .slides {
     display: flex;
-}
+} */
 
-.slides > div {
+/* .slides > div {
 flex-shrink: 0;
 width: 750px;
 height: 500px;
@@ -341,7 +458,7 @@ display: flex;
 justify-content: center;
 align-items: center;
 font-size: 100px;
-}
+} */
 
 #mainSlide {
     border: 10px solid;
@@ -351,10 +468,10 @@ font-size: 100px;
 }
 
 /* mini pictures in the side bar */
-.slide1 {
+ .slide1 {
     background: url('../images/photo_gallery/1.jpg');
 }
-
+/*
 .slide2 {
     background: url('../images/photo_gallery/2.jpg');
 }
@@ -389,7 +506,7 @@ font-size: 100px;
 
 .slide10 {
     background: url('../images/photo_gallery/10.jpg');
-}
+} */
 
 .slide1, 
 .slide2,
@@ -415,7 +532,7 @@ font-size: 100px;
 }
 
 .photography a {
-    display: inline-flex;
+    display: flex;
     align-items: center;
     justify-content: center;
     margin: 0 0 0.5rem 0;
@@ -445,11 +562,15 @@ font-size: 100px;
     background-color: rgb(199, 224, 214);
     margin-top: -20px;
     padding-bottom: 50px;
-    /* new */
+    width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
 }
+
+/* .photoContent {
+    position: absolute;
+} */
 
 /*****************************************************************************************************/
                                     /* CONTACT SECTION STYLING */
