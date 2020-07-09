@@ -31,5 +31,11 @@ CHANGES:
   
   -changed photo gallery design; still need to clean up code
   
+ 7/9/2020:
+ 
+ -fixed: resizing issues; responsive design
+ 
+ -to do: contact page, sizing of project images when resizing, implementing resume download, linking project to project section
+  
 
 
