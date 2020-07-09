@@ -40,7 +40,7 @@ body {
 
     /* nav bar styling */
     .nav-li-items {
-        /* display: none !important; */
+        /* display: none !important */
         position: absolute;
         right: 0px;
         top: 60px;
@@ -336,7 +336,7 @@ nav li a:hover {
     animation-duration: 1s;
     animation-delay: 2.5s;
     animation-fill-mode: forwards; 
-    top: -300px;
+    top: -400px;
 }
 
 @keyframes dropDownAnimation {

@@ -20,22 +20,26 @@ document.querySelectorAll('a[href^="#"][href$="Anchor"]').forEach(anchor => {
 window.addEventListener('scroll', function(e) {
     e.preventDefault();
 
-    if (window.pageYOffset === 0) {
-        removeAllActiveNavClasses();
-        document.querySelector('.homeNav').classList.add('active-nav');
-    } else if (window.pageYOffset >= 594 && window.pageYOffset < 1379) {
-        removeAllActiveNavClasses();
-        document.querySelector('.aboutNav').classList.add('active-nav');
-    } else if (window.pageYOffset >= 1380 && window.pageYOffset < 2000) {
-        removeAllActiveNavClasses();
-        document.querySelector('.projectsNav').classList.add('active-nav');
-    } else if (window.pageYOffset >= 2001 && window.pageYOffset < 2770) {
-        removeAllActiveNavClasses();
-        document.querySelector('.photosNav').classList.add('active-nav');
-    } else if (window.pageYOffset >= 2771) {
-        removeAllActiveNavClasses();
-        document.querySelector('.contactNav').classList.add('active-nav');
-    }
+    // only applies if window size is greater than 768 pixels; otherwise, ignore the below
+    if (window.innerWidth > 768) {
+
+        if (window.pageYOffset === 0) {
+            removeAllActiveNavClasses();
+            document.querySelector('.homeNav').classList.add('active-nav');
+        } else if (window.pageYOffset >= 594 && window.pageYOffset < 1379) {
+            removeAllActiveNavClasses();
+            document.querySelector('.aboutNav').classList.add('active-nav');
+        } else if (window.pageYOffset >= 1380 && window.pageYOffset < 2000) {
+            removeAllActiveNavClasses();
+            document.querySelector('.projectsNav').classList.add('active-nav');
+        } else if (window.pageYOffset >= 2001 && window.pageYOffset < 2770) {
+            removeAllActiveNavClasses();
+            document.querySelector('.photosNav').classList.add('active-nav');
+        } else if (window.pageYOffset >= 2771) {
+            removeAllActiveNavClasses();
+            document.querySelector('.contactNav').classList.add('active-nav');
+        }
+    } 
 })
 
 function removeAllActiveNavClasses() {
@@ -75,7 +79,7 @@ burger.addEventListener('click', function(e) {
 })
 
 window.addEventListener('resize', function() {
-    console.log(window.innerWidth);
+    // console.log(window.innerWidth);
 
     if (window.innerWidth > 768 && nav.classList.contains('nav-active')) {
         nav.classList.toggle('nav-active');
@@ -83,3 +87,34 @@ window.addEventListener('resize', function() {
         nav.classList.toggle('nav-active');
     }
 })
+
+// adjust padding to contact anchor when window sizing is <= 768
+
+let contactAnchor = document.querySelector('#contactAnchor');
+
+if (window.innerWidth <= 768) {
+    contactAnchor.style.paddingTop = "65px";
+}
+
+// remove dropdown of navbar when clicking on a link
+
+let navLinks = document.querySelectorAll('.nav-li-items li a');
+
+console.log(navLinks);
+for (let i = 0; i < navLinks.length; i++) {
+    navLinks[i].addEventListener('click', function(e) {
+
+        e.preventDefault();
+    
+        if (window.innerWidth <= 768) {
+            nav.classList.toggle('nav-active');
+        }
+    })
+}
+
+window.onload = function() {
+    if (window.innerWidth <= 768) {
+        nav.classList.toggle('nav-active');
+    }
+}
+
