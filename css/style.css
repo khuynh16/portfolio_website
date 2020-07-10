@@ -77,6 +77,10 @@ body {
         margin: 0 auto;
     }
 
+    .card-img-top {
+        height: 20vw !important;
+    }
+
     /* photo gallery styling */
     .col-2 {
         max-width: 40% !important;  
