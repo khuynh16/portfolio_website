@@ -112,8 +112,9 @@ for (let i = 0; i < navLinks.length; i++) {
     })
 }
 
+// nav bar is originally hidden, and shows when window size is greater than 768 pixels
 window.onload = function() {
-    if (window.innerWidth <= 768) {
+    if (window.innerWidth > 768) {
         nav.classList.toggle('nav-active');
     }
 }

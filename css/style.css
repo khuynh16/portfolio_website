@@ -19,6 +19,7 @@ body {
     text-align:center; 
     width:100%;
     margin-top: -110px;
+    margin: 0 auto;
 }
 
 .sectionTitle h1 {
@@ -31,6 +32,10 @@ body {
 .sectionTitle h1 span {
     position: absolute;
     top: -80px;
+}
+
+.siteWrapper {
+    overflow-x: hidden;
 }
 
 /*****************************************************************************************************/
@@ -68,10 +73,8 @@ body {
     }
 
     /* projects styling */
-    .firstProject, 
-    .secondProject, 
-    .thirdProject {
-        padding-left: 110px;
+    .card {
+        margin: 0 auto;
     }
 
     /* photo gallery styling */
@@ -85,10 +88,10 @@ body {
         padding: 0;
     }
 
-    .photography a {
+    /* .photography a {
         width: 80px;
         height: 70px;
-    }
+    } */
 
     .photography a:first-child {
         margin-left: 0 !important;
@@ -104,7 +107,7 @@ body {
     }
 }
 
-/* if smaller than 1090 px, do the following: */
+/* if smaller than 940 px, do the following: */
 @media only screen and (max-width: 940px) {
     /* photo gallery styling */
     .photoContent {
@@ -121,14 +124,20 @@ body {
     .picButtons {
         display: flex;
         flex-direction: row !important;
+        justify-content: space-around;
     }
 
     .photography  {
         overflow: hidden;
     }
 
+    .photography a {
+        width: 80px;
+        height: 70px;
+    }
+
     .col-2 {
-        max-width: 80% !important;  /* adjust width of mini image boxes */
+        max-width: 70% !important;  /* adjust width of mini image boxes */
     }
 
     .col-8 {
@@ -146,6 +155,10 @@ body {
 
     .firstProject, .secondProject {
         padding-bottom: 20px;
+    }
+
+    .card {
+        margin: 0 auto;
     }
 
     /* photo gallery styling */
