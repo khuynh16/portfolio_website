@@ -63,7 +63,7 @@ let mainSlide = document.querySelector('#mainSlide');
 let photoGalleryPics = document.getElementsByClassName('pgPic');
 
 for (let i = 0; i < photoGalleryPics.length; i++) {
-    photoGalleryPics[i].addEventListener('mouseover', function(e) {
+    photoGalleryPics[i].addEventListener('click', function(e) {
         e.preventDefault();        
         mainSlide.src='images/photo_gallery/' + (i + 1) + '.jpg';
     })
@@ -93,7 +93,7 @@ window.addEventListener('resize', function() {
 let contactAnchor = document.querySelector('#contactAnchor');
 
 if (window.innerWidth <= 768) {
-    contactAnchor.style.paddingTop = "65px";
+    contactAnchor.style.paddingTop = "80px";
 }
 
 // remove dropdown of navbar when clicking on a link

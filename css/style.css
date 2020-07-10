@@ -37,10 +37,8 @@ body {
                                     /* RESPONSIVE STYLING */
 /*****************************************************************************************************/
 @media only screen and (max-width: 768px) {
-
     /* nav bar styling */
     .nav-li-items {
-        /* display: none !important */
         position: absolute;
         right: 0px;
         top: 60px;
@@ -97,7 +95,6 @@ body {
     }
 
     .picButtons {
-        /* text-align: center; */
         margin: 0 !important;
     }
 
@@ -109,7 +106,6 @@ body {
 
 /* if smaller than 1090 px, do the following: */
 @media only screen and (max-width: 940px) {
-
     /* photo gallery styling */
     .photoContent {
         display: flex;
@@ -138,12 +134,11 @@ body {
     .col-8 {
         max-height: 280px;
     }
-
 }
 
 /* if smaller than 1090 px, do the following: */
 @media only screen and (max-width: 1090px) {
-
+    /* project styling */
     .firstProjectRow {
         padding-left: 0;
         padding-right: 0;
@@ -151,7 +146,6 @@ body {
 
     .firstProject, .secondProject {
         padding-bottom: 20px;
-        /* padding-left: 80px; */
     }
 
     /* photo gallery styling */
@@ -173,11 +167,8 @@ body {
     }
 }
 
-
-
 /* if smaller than 1290px, do the following:  */
 @media only screen and (max-width: 1290px) {
-
     /* projects styling */
     .spacer1,
     .spacer2,
@@ -287,11 +278,8 @@ nav li a:hover {
     width: 100%;
     overflow: hidden;
     background: url(../images/mountain-side-2.jpg);
-    background-size: cover;                        /* was 'cover' */
+    background-size: cover;                        
     padding-top: 66px;                                
-    /* max-width: 100%;  */
-    /* float:left;
-    clear:none;   */
 }
 
 .banner-block {
@@ -304,10 +292,6 @@ nav li a:hover {
     text-align: center;
     color: black;
 }
-
-/* .moveLeft {
-    margin-left: 15%;
-} */
 
 .banP1 {
     display: inline-block;
@@ -416,9 +400,11 @@ figure {
     width: 35%;
     float: right;
 }
+
 figure img {
     vertical-align: top;
 }
+
 figure figcaption {
     text-align: center;
 }
@@ -440,7 +426,6 @@ figure figcaption {
 }
 
 .firstProjectRow {
-    /* padding-top: 40px; */
     padding-bottom: 30px;
 }
 
@@ -483,22 +468,6 @@ figure figcaption {
     overflow: hidden;
 }
 
-/* .slides {
-    display: flex;
-} */
-
-/* .slides > div {
-flex-shrink: 0;
-width: 750px;
-height: 500px;
-position: relative;
-
-display: flex;
-justify-content: center;
-align-items: center;
-font-size: 100px;
-} */
-
 #mainSlide {
     border: 10px solid;
     border-image-slice: 1;
@@ -510,7 +479,7 @@ font-size: 100px;
  .slide1 {
     background: url('../images/photo_gallery/1.jpg');
 }
-/*
+
 .slide2 {
     background: url('../images/photo_gallery/2.jpg');
 }
@@ -545,7 +514,7 @@ font-size: 100px;
 
 .slide10 {
     background: url('../images/photo_gallery/10.jpg');
-} */
+}
 
 .slide1, 
 .slide2,
@@ -607,10 +576,6 @@ font-size: 100px;
     justify-content: center;
 }
 
-/* .photoContent {
-    position: absolute;
-} */
-
 /*****************************************************************************************************/
                                     /* CONTACT SECTION STYLING */
 /*****************************************************************************************************/
@@ -653,17 +618,6 @@ font-size: 100px;
     vertical-align: middle;
     line-height: 40px;
 }
-
-/* .page-footer li {
-	font-size: 13px;
-	color: #999;
-	line-height: 1.6;
-}
-
-.page-footer li:hover {
-	color: #fff;
-	cursor: pointer;
-} */
 
 .copy {
 	color: #585858;
