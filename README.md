@@ -1,6 +1,6 @@
 # portfolio_website
 
-This is my portfolio website where I will be able to show off my projects, work, and bio about me.
+This is my portfolio website where I will be able to show off my projects, work, and bio about me. Live @ kelvinahuynh.com.
 
 Plans include:
 
