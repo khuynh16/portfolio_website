@@ -118,61 +118,56 @@ window.onload = function() {
     }
 }
 
-
-
 // contact page JS
 // source of code/help: https://www.youtube.com/watch?v=FWCCML17raI&list=PLouOhxoIAdHr8ljfrEYUJN0hqzOUbptLa&index=3&t=5s
-
 function submitToAPI(e) {
     e.preventDefault();
-//       var URL = "API Gateway";
 
-
-    var name = document.getElementById("name-input").value;
-    var email = document.getElementById("email-input").value;
-    var subject = document.getElementById("subject-input").value;
-    var desc = document.getElementById("description-input").value;
-    if (name=="" || email=="" || subject=="" || desc=="")
-     {
+    let name = document.getElementById("name-input").value;
+    let email = document.getElementById("email-input").value;
+    let subject = document.getElementById("subject-input").value;
+    let desc = document.getElementById("description-input").value;
+    if (name=="" || email=="" || subject=="" || desc=="") {
          alert("Please Fill All Required Field");
          return false;
-     }
+    }
      
-     nameRE = /^[A-Z]{1}[a-z]{2,20}[ ]{1}[A-Z]{1}[a-z]{2,20}/;
-     if(!nameRE.test(name)) {
-         alert("Name entered, is not valid");
-             return false;
-     }
-     
-     emailRE = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
-     if(!emailRE.test(email)) {
-         alert("Email Address entered, is not valid");
-             return false;
-     }
-    var data = {
+    nameRE = /^[A-Z]{1}[a-z]{2,20}[ ]{1}[A-Z]{1}[a-z]{2,20}/;
+    if(!nameRE.test(name)) {
+        alert("Name entered is not valid!");
+            return false;
+    }
+    
+    emailRE = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+    if(!emailRE.test(email)) {
+        alert("Email address entered is not valid!");
+            return false;
+    }
+    let data = {
        name : name,
        email : email,
        subject : subject,
        desc : desc
-     };
+    };
 
-     var xmlhttp = new XMLHttpRequest();
+    let xmlhttp = new XMLHttpRequest();
      xmlhttp.open("POST", "https://szxjxwan0d.execute-api.us-east-2.amazonaws.com/prod/email");
      xmlhttp.setRequestHeader("Content-Type", "application/json");
      xmlhttp.send(JSON.stringify(data));
      xmlhttp.onreadystatechange = function() {
-     if (xmlhttp.readyState === 4) {
-         var response = JSON.parse(xmlhttp.responseText);
-         if (xmlhttp.status === 200 ) {
-             console.log('successful');
-             document.getElementById("contact-form").innerHTML = "<h1>Thank you for your message/feedback<br>our team will get back to you soon!</h1>";
-         } else {
-             console.log('failed');
-         }
-     }
- }
- 
-    document.getElementById('contact-form').reset();
-   
- } 
+        if (xmlhttp.readyState === 4) {
+            let response = JSON.parse(xmlhttp.responseText);
+            if (xmlhttp.status === 200 ) {
+                console.log('successful');
+                document.getElementById("contact-form").innerHTML = 
+                        `<div style="text-align:center">
+                            <h1>Thank you for your message.<br>I will get back to you soon!</h1>
+                        </div>`;
+                
+            } else {
+                console.log('failed');
+            }
+        }
+    }
+} 
 
