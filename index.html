@@ -174,33 +174,37 @@
 								</p>
 								<p class="pb-3"><b>Used software technology:</b></p>
 								<ul class="project-description pl-2">
-									<p class="pb-2"><i>HTML</i></p>
+									<p class=""><i>HTML</i></p>
 									<li class="pb-2 ml-4">Initial index.html (home page) of project</li>
-									<li class="pb-2 ml-4">Admin login and admin page but later converted to embedded javascript
+									<li class="pb-4 ml-4">Admin login and admin page but later converted to embedded javascript
 															templating (EJS) file format</li>
-									<p class="pb-2"><i>CSS</i></p>
-									<li class="pb-2 ml-4">Styling of elements, including formatting, visual display, and hovering</li>
+									<p class=""><i>CSS</i></p>
+									<li class="pb-4 ml-4">Styling of elements, including formatting, visual display, hovering, and media queries</li>
 									<p class="pb-2"><i>JavaScript</i></p>
 									<li class="pb-2 ml-4">Document Object Model (DOM) manipulation</li>
-									<li class="pb-2 ml-4">Click functionality of elements (buttons, dropdown lists, page tabs)</li>
-									<p class="pb-2"><i>JQuery</i></p>
+									<li class="pb-4 ml-4">Click functionality of elements (buttons, dropdown lists, page tabs)</li>
+									<p class=""><i>JQuery</i></p>
 									<li class="pb-2 ml-4">Used similarly to JavaScript, and used initially but ended up using JS 
 															more often</li>
-									<li class="pb-2 ml-4">Specifically needed for Bootstrap modal manipulation (didn't work with
+									<li class="pb-4 ml-4">Specifically needed for Bootstrap modal manipulation (didn't work with
 															just JavaScript)</li>
-									<p class="pb-2"><i>Node.js</i></p>
+									<p class=""><i>Node.js</i></p>
 									<li class="pb-2 ml-4">Acted as initial local server for development</li>
-									<li class="pb-2 ml-4">Node package manager (npm) used to install packages (e.g. Express, Mongoose)</li>
-									<p class="pb-2"><i>MongoDB</i></p>
-									<li class="pb-2 ml-4">NoSQL database to hold information for various collections: orders,
+									<li class="pb-4 ml-4">Node package manager (npm) used to install packages (e.g. Express, Mongoose)</li>
+									<p class=""><i>MongoDB</i></p>
+									<li class="pb-4 ml-4">NoSQL database to hold information for various collections: orders,
 															nails services, pedicure services, employees and managers</li>
-									<p class="pb-2"><i>Mongoose</i></p>
-									<li class="pb-2 ml-4">Backend library for MongoDB and Node.js to handle modeling of collections
+									<p class=""><i>Mongoose</i></p>
+									<li class="pb-4 ml-4">Backend library for MongoDB and Node.js to handle modeling of collections
 															in MongoDB database for project</li>
-									<p class="pb-2"><i>Express.js</i></p>
-									<li class="pb-2 ml-4">Node.js framework to handle routes, as well as handling requests and views</li>
-									<p class="pb-2"><i>Visual Studio Code</i></p>
-									<li class="pb-2 ml-4">Utilized integrated development environment for coding</li>
+									<p class=""><i>Express.js</i></p>
+									<li class="pb-4 ml-4">Node.js framework to handle routes, as well as handling requests and views</li>
+									<p class=""><i>Visual Studio Code</i></p>
+									<li class="pb-4 ml-4">Utilized integrated development environment for coding</li>
+									<p class=""><i>MongoDB Atlas</i></p>
+									<li class="pb-4 ml-4">Hosts the database online</li>
+									<p class=""><i>Heroku</i></p>
+									<li class="pb-4 ml-4">Hosts the files for project online</li>
 								</ul>
 							</div>
 							<div class="modal-footer">
@@ -250,21 +254,21 @@
 					<div class="row">
 						<!--Grid column-->
 						<div class="col-md-9 mb-md-0 mb-5">
-							<form id="contact-form" name="contact-form" action="mail.php" method="POST">
+							<form id="contact-form" name="contact-form" method="POST">
 								<!--Grid row-->
 								<div class="row">
 									<!--Grid column-->
 									<div class="col-md-6">
 										<div class="md-form mb-0">
 											<label for="name" class="">Your name</label>
-											<input type="text" id="name" name="name" class="form-control">
+											<input type="text" id="name-input" name="name" class="form-control">
 										</div>
 									</div>
 									<!--Grid column-->
 									<div class="col-md-6">
 										<div class="md-form mb-0">
 											<label for="email" class="">Your email</label>
-											<input type="text" id="email" name="email" class="form-control">
+											<input type="text" id="email-input" name="email" class="form-control">
 										</div>
 									</div>
 								</div>
@@ -273,7 +277,7 @@
 									<div class="col-md-12">
 										<div class="md-form mb-0 mt-2">
 											<label for="subject" class="">Subject</label>
-											<input type="text" id="subject" name="subject" class="form-control">	
+											<input type="text" id="subject-input" name="subject" class="form-control">	
 										</div>
 									</div>
 								</div>
@@ -283,16 +287,17 @@
 									<div class="col-md-12">	
 										<div class="md-form mt-2">
 											<label for="message">Your message</label>
-											<textarea type="text" id="message" name="message" rows="4" class="form-control md-textarea"></textarea>										
+											<textarea type="text" id="description-input" name="message" rows="4" class="form-control md-textarea"></textarea>										
 										</div>	
 									</div>
 								</div>	
+								<div class="text-center text-md-left">
+									<!-- <a class="btn btn-primary mt-3 mb-3 contactSend" onclick="validateForm();">Send</a> -->
+									<a class="btn btn-primary mt-3 mb-3" onclick="submitToAPI(event)">Send</a>
+								</div>
 							</form>
-							<div class="text-center text-md-left">
-								<!-- <a class="btn btn-primary mt-3 mb-3 contactSend" onclick="validateForm();">Send</a> -->
-								<a class="btn btn-primary mt-3 mb-3" onclick="document.getElementById('contact-form').submit();">Send</a>
-							</div>
-							<div class="status"></div>
+							
+							<!-- <div class="status"></div> -->
 						</div>
 						<!--Grid column-->
 						<div class="col-md-3 text-center">

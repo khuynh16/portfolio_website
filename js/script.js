@@ -26,16 +26,16 @@ window.addEventListener('scroll', function(e) {
         if (window.pageYOffset === 0) {
             removeAllActiveNavClasses();
             document.querySelector('.homeNav').classList.add('active-nav');
-        } else if (window.pageYOffset >= 594 && window.pageYOffset < 1379) {
+        } else if (window.pageYOffset >= 594 && window.pageYOffset < 1324) {
             removeAllActiveNavClasses();
             document.querySelector('.aboutNav').classList.add('active-nav');
-        } else if (window.pageYOffset >= 1380 && window.pageYOffset < 2000) {
+        } else if (window.pageYOffset >= 1325 && window.pageYOffset < 1971) {
             removeAllActiveNavClasses();
             document.querySelector('.projectsNav').classList.add('active-nav');
-        } else if (window.pageYOffset >= 2001 && window.pageYOffset < 2770) {
+        } else if (window.pageYOffset >= 1972 && window.pageYOffset < 2700) {
             removeAllActiveNavClasses();
             document.querySelector('.photosNav').classList.add('active-nav');
-        } else if (window.pageYOffset >= 2771) {
+        } else if (window.pageYOffset >= 2701) {
             removeAllActiveNavClasses();
             document.querySelector('.contactNav').classList.add('active-nav');
         }
@@ -100,7 +100,6 @@ if (window.innerWidth <= 768) {
 
 let navLinks = document.querySelectorAll('.nav-li-items li a');
 
-console.log(navLinks);
 for (let i = 0; i < navLinks.length; i++) {
     navLinks[i].addEventListener('click', function(e) {
 
@@ -118,4 +117,62 @@ window.onload = function() {
         nav.classList.toggle('nav-active');
     }
 }
+
+
+
+// contact page JS
+// source of code/help: https://www.youtube.com/watch?v=FWCCML17raI&list=PLouOhxoIAdHr8ljfrEYUJN0hqzOUbptLa&index=3&t=5s
+
+function submitToAPI(e) {
+    e.preventDefault();
+//       var URL = "API Gateway";
+
+
+    var name = document.getElementById("name-input").value;
+    var email = document.getElementById("email-input").value;
+    var subject = document.getElementById("subject-input").value;
+    var desc = document.getElementById("description-input").value;
+    if (name=="" || email=="" || subject=="" || desc=="")
+     {
+         alert("Please Fill All Required Field");
+         return false;
+     }
+     
+     nameRE = /^[A-Z]{1}[a-z]{2,20}[ ]{1}[A-Z]{1}[a-z]{2,20}/;
+     if(!nameRE.test(name)) {
+         alert("Name entered, is not valid");
+             return false;
+     }
+     
+     emailRE = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+     if(!emailRE.test(email)) {
+         alert("Email Address entered, is not valid");
+             return false;
+     }
+    var data = {
+       name : name,
+       email : email,
+       subject : subject,
+       desc : desc
+     };
+
+     var xmlhttp = new XMLHttpRequest();
+     xmlhttp.open("POST", "https://szxjxwan0d.execute-api.us-east-2.amazonaws.com/prod/email");
+     xmlhttp.setRequestHeader("Content-Type", "application/json");
+     xmlhttp.send(JSON.stringify(data));
+     xmlhttp.onreadystatechange = function() {
+     if (xmlhttp.readyState === 4) {
+         var response = JSON.parse(xmlhttp.responseText);
+         if (xmlhttp.status === 200 ) {
+             console.log('successful');
+             document.getElementById("contact-form").innerHTML = "<h1>Thank you for your message/feedback<br>our team will get back to you soon!</h1>";
+         } else {
+             console.log('failed');
+         }
+     }
+ }
+ 
+    document.getElementById('contact-form').reset();
+   
+ } 
 
