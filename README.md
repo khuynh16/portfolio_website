@@ -1,4 +1,4 @@
-# portfolio_website
+# portfolio_website (outdated)
 
 This is my portfolio website where I will be able to show off my projects, work, and bio about me. Live @ kelvinahuynh.com.
 
